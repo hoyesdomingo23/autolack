@@ -6,7 +6,7 @@ import imagenUnoHome from "../images/banner-uno-prueba-autolack.jpg";
 import imagenDosHome from "../images/banner-dos-prueba-autolack.jpg";
 import imagenTresHome from "../images/banner-tres-prueba-autolack.jpg";
 import Header from "../header/Header";
-import Footer from "../footer/footer";
+import Footer from "../footer/Footer";
 import "./Home.css";
 
 const Home = () => {
