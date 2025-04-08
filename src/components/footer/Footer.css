@@ -1,0 +1,36 @@
+.footer-general-toda-la-pagina {
+  background-color: #f1f1f1;
+  margin-top: 40px;
+  color: black;
+  text-transform: uppercase;
+}
+.footer-general-toda-la-pagina h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+
+  position: relative;
+  top: 20px;
+}
+.datos-planta-footer li {
+  text-decoration: none !important;
+  list-style-type: none;
+}
+.datos-planta-footer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.contenedor-toda-la-informacion-footer {
+  display: flex;
+
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor-toda-la-informacion-footer {
+    display: flex;
+    flex-direction: column;
+  }
+}

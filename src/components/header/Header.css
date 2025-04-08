@@ -1,0 +1,163 @@
+/* Estilos generales */
+.estilos-para-header {
+  display: flex;
+  justify-content: center;
+  background-color: #125099;
+  padding: 10px 0;
+  color: white;
+}
+
+.estilos-para-header a {
+  text-decoration: none;
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .estilos-para-header {
+    color: black !important;
+  }
+  .estilos-para-header a {
+    color: #000000;
+  }
+}
+.estilos-para-nav {
+  width: 100%;
+}
+
+.estilos-para-lista {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.estilos-para-item {
+  margin: 0 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Dropdown para desktop */
+.estilos-para-dropdown:hover .estilos-para-submenu {
+  display: block;
+}
+
+.estilos-para-submenu {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  z-index: 4;
+}
+
+.estilos-para-submenu li {
+  padding: 10px;
+  border-bottom: 1px solid #000000;
+  color: #000000;
+}
+
+.estilos-para-submenu li:last-child {
+  border-bottom: none;
+}
+
+.estilos-para-submenu li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Estilos para mobile */
+.estilos-para-mobile {
+  display: none;
+  position: relative;
+}
+
+.estilos-para-menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 10;
+}
+
+/* Popup */
+.estilos-para-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in-out;
+  z-index: 9;
+}
+
+.estilos-para-popup.open {
+  transform: translateX(0);
+}
+
+.estilos-para-popup.closed {
+  transform: translateX(-100%);
+}
+
+.estilos-para-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.estilos-para-lista-popup {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 50px 20px;
+  margin: 0;
+}
+
+.estilos-para-lista-popup li {
+  padding: 15px 0;
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+}
+
+.estilos-para-lista-popup li:last-child {
+  border-bottom: none;
+}
+
+/* Ocultar menú desktop en mobile */
+
+.whatsapp-boton {
+  position: fixed;
+  background-color: #125099;
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+  left: 95%;
+  top: 80%;
+  z-index: 99;
+}
+
+.whatsapp-boton:hover {
+  transform: scale(1.03);
+}
+@media screen and (max-width: 768px) {
+  .estilos-para-desktop {
+    display: none;
+  }
+  .estilos-para-mobile {
+    display: block;
+  }
+  .whatsapp-boton {
+    left: 87%;
+  }
+}

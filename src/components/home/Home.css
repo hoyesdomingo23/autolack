@@ -1,0 +1,151 @@
+.banner-principal-autolack-home img {
+  width: 100%;
+}
+
+.contenedor-titulo-h1-tecnologia-texto {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedor-titulo-h1-tecnologia-texto h1 {
+  font-size: 30px;
+  margin-top: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contenedor-titulo-h1-tecnologia-texto button {
+  margin-top: 20px;
+  background-color: transparent;
+  padding: 10px 40px;
+}
+
+.contenedor-titulo-h1-tecnologia-texto button:hover {
+  cursor: pointer;
+}
+
+.contenedor-titulo-h1-tecnologia-texto a {
+  text-decoration: none;
+  color: black;
+}
+
+.contenedor-titulo-h1-tecnologia-texto span {
+  width: 1000px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor-titulo-h1-tecnologia-texto span {
+    width: 360px;
+  }
+}
+
+.contenedor-imagenes-presentacion-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-imagenes-presentacion-home img {
+  width: 30%;
+  margin: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor-imagenes-presentacion-home {
+    display: flex;
+    flex-direction: column;
+  }
+  .contenedor-imagenes-presentacion-home img {
+    width: 100%;
+  }
+}
+
+/* Slider */
+.slider-autolack-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #125099;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 30px;
+}
+
+.slider-button-left {
+  left: 10px;
+}
+
+.slider-button-right {
+  right: 10px;
+}
+
+.slider-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+}
+
+.slider-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 1;
+}
+
+/* Otros estilos */
+.contenedor-titulo-h1-tecnologia-texto {
+  text-align: center;
+  padding: 20px;
+}
+
+.contenedor-imagenes-presentacion-home {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.contenedor-imagenes-presentacion-home img {
+  width: 30%;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  .contenedor-imagenes-presentacion-home img {
+    width: 100%;
+    height: auto;
+  }
+}
+.map-section h2 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.map-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
