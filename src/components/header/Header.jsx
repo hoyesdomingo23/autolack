@@ -19,6 +19,9 @@ const Header = () => {
   const handleSomos = () => {
     navigate("/nosotros");
   };
+  const handleLineas = () => {
+    navigate("/lineas");
+  };
   return (
     <>
       <header className="estilos-para-header">
@@ -31,7 +34,12 @@ const Header = () => {
             <li className="estilos-para-item" onClick={handleSomos}>
               ¿QUIÉNES SOMOS?
             </li>
-            <li className="estilos-para-item estilos-para-dropdown">LINEAS</li>
+            <li
+              className="estilos-para-item estilos-para-dropdown"
+              onClick={handleLineas}
+            >
+              LINEAS
+            </li>
             <li className="estilos-para-item estilos-para-dropdown">
               FICHAS TÉCNICAS
             </li>
@@ -82,7 +90,7 @@ const Header = () => {
               <ul className="estilos-para-lista-popup">
                 <li onClick={handleHome}>INICIO</li>
                 <li onClick={handleSomos}>¿QUIÉNES SOMOS?</li>
-                <li>LINEAS</li>
+                <li onClick={handleLineas}>LINEAS</li>
                 <li>FICHAS TÉCNICAS</li>
                 {/* <li>MISIÓN Y VISIÓN</li> */}
                 <li>

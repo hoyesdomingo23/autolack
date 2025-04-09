@@ -114,7 +114,7 @@ const Home = () => {
       </section>
       <section className="map-section">
         <h2>¿Donde estamos ubicados?</h2>
-        <LoadScript googleMapsApiKey="">
+        <LoadScript googleMapsApiKey="AIzaSyAOFYDSJK__a0Wd4h52g7LO2ik84SBsDwE">
           <GoogleMap
             key={key} // La clave cambia, forzando la recreación del mapa
             mapContainerStyle={mapContainerStyle}
