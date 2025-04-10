@@ -6,6 +6,7 @@ import Home from "./components/home/Home";
 import Quienessomos from "./components/quienessomos/Quienessomos";
 import Lineas from "./components/lineas/Lineas";
 import Producto from "./components/lineas/Producto";
+import FichasTecnicas from "./components/fichastecnicas/FichasTecnicas";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/nosotros" element={<Quienessomos />} />
           <Route path="/lineas" element={<Lineas />} />
           <Route path="/productos/:nombre" element={<Producto />} />
+          <Route path="/fichas-tecnicas" element={<FichasTecnicas />} />
         </Routes>
       </Router>
     </>

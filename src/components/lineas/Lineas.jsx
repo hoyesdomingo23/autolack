@@ -57,6 +57,7 @@ const Lineas = () => {
             <div className="opciones-filtro">
               <div onClick={() => manejarOrden("az")}>Filtrar de A a Z</div>
               <div onClick={() => manejarOrden("za")}>Filtrar de Z a A</div>
+              {/* <div onClick={() => manejarOrden("barniz")}>Barniz</div> */}
               <div onClick={() => manejarOrden("default")}>
                 Dejar por defecto
               </div>

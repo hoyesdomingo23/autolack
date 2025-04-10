@@ -1,143 +1,164 @@
 const ProductosLineas = [
   {
     image: "/bote-pintura-prueba.png",
-    text: "Rojo Rubí",
+    text: "Barniz HS",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-rojo-rubi.pdf",
+    pdf: "/fichastecnicas/Barnices/FT BARNIZ HS.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Azul Celeste",
+    text: "BARNIZ PLUS 2K",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-azul-celeste.pdf",
+    pdf: "/fichastecnicas/Barnices/FT BARNIZ PLUS 2K.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Verde Esmeralda",
+    text: "BARNIZ EXPRESS",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-verde-esmeralda.pdf",
+    pdf: "/fichastecnicas/Barnices/FT BARNIZ EXPRESS.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Amarillo Oro",
+    text: "CATALIZADOR AUTOIMPRIMANTE",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-amarillo-oro.pdf",
+    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Violeta Profundo",
+    text: "CATALIZADOR HS",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-violeta-profundo.pdf",
+    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Naranja Mandarina",
+    text: "CATALIZADOR 410",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-naranja-mandarina.pdf",
+    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Rosa Pastel",
+    text: "CATALIZADOR 411",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-rosa-pastel.pdf",
+    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Marrón Chocolate",
+    text: "CATALIZADOR 412",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-marron-chocolate.pdf",
+    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Negro Ébano",
+    text: "DILUYENTE PUR ATL",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-negro-ebano.pdf",
+    pdf: "/fichastecnicas/Diluyentesycomplementarios/FT DILUYENTE PUR ATL.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Blanco Perla",
+    text: "DESENGRASANTE B.S",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-blanco-perla.pdf",
+    pdf: "/fichastecnicas/Diluyentesycomplementarios/FT DESENGRASANTE B.S.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Gris Plomo",
+    text: "REMOVEDOR DE OXIDO",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-gris-plomo.pdf",
+    pdf: "/fichastecnicas/Diluyentesycomplementarios/FT REMOVEDOR DE OXIDO.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Dorado Imperial",
+    text: "SLN EPOXICA",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-dorado-imperial.pdf",
+    pdf: "/fichastecnicas/Diluyentesycomplementarios/FT SLN EPOXICA.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Plateado Lunar",
+    text: "SOLUCIÓN POLIURETANICA",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-plateado-lunar.pdf",
+    pdf: "/fichastecnicas/Diluyentesycomplementarios/FT SOLUCIÓN POLIURETANICA.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Turquesa Caribeño",
+    text: "Entonador PS",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-turquesa-caribeno.pdf",
+    pdf: "/fichastecnicas/Entonadoresps/FT ENTONADORES PS.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Fucsia Vibrante",
+    text: "Entonador PUR 1",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-fucsia-vibrante.pdf",
+    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Aguamarina Claro",
+    text: "Entonador PUR 1",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-aguamarina-claro.pdf",
+    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Índigo Oscuro",
+    text: "Fondo 1",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-indigo-oscuro.pdf",
+    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Ocre Tierra",
+    text: "Masilla 1",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-ocre-tierra.pdf",
+    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Lavanda Sereno",
+    text: "Mate 1",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-lavanda-sereno.pdf",
+    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
   },
   {
     image: "/bote-pintura-prueba.png",
-    text: "Cian Tropical",
+    text: "EPOXICO ANTICORROSIVOS",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/pdfs/ficha-cian-tropical.pdf",
+    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT EPOXICO ANTICORROSIVOS.pdf",
+  },
+  {
+    image: "/bote-pintura-prueba.png",
+    text: "WASH PRIMER",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT WASH PRIMER.pdf",
+  },
+  {
+    image: "/bote-pintura-prueba.png",
+    text: "AUTOIMPRIMANTE GRIS",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
+  },
+  {
+    image: "/bote-pintura-prueba.png",
+    text: "Esmalte EP 1",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
   },
 ];
 

@@ -22,6 +22,9 @@ const Header = () => {
   const handleLineas = () => {
     navigate("/lineas");
   };
+  const handleFichasTecnicas = () => {
+    navigate("/fichas-tecnicas");
+  };
   return (
     <>
       <header className="estilos-para-header">
@@ -40,7 +43,10 @@ const Header = () => {
             >
               LINEAS
             </li>
-            <li className="estilos-para-item estilos-para-dropdown">
+            <li
+              className="estilos-para-item estilos-para-dropdown"
+              onClick={handleFichasTecnicas}
+            >
               FICHAS TÉCNICAS
             </li>
             {/* <li className="estilos-para-item">MISIÓN Y VISIÓN</li> */}
@@ -91,7 +97,7 @@ const Header = () => {
                 <li onClick={handleHome}>INICIO</li>
                 <li onClick={handleSomos}>¿QUIÉNES SOMOS?</li>
                 <li onClick={handleLineas}>LINEAS</li>
-                <li>FICHAS TÉCNICAS</li>
+                <li onClick={handleFichasTecnicas}>FICHAS TÉCNICAS</li>
                 {/* <li>MISIÓN Y VISIÓN</li> */}
                 <li>
                   <a href="https://api.whatsapp.com/message/QHMKJUJPPTZHP1?autoload=1&app_absent=0">
