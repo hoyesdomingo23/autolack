@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Importa Link para la navegación
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import ProductosLineas from "./ProductosLineas";
@@ -75,12 +76,16 @@ const Lineas = () => {
         <div className="grid">
           {productos.length > 0 ? (
             productos.map((producto, index) => (
-              <div key={index} className="producto">
+              <Link
+                to={`/productos/${encodeURIComponent(producto.text)}`} // Redirige al producto seleccionado
+                key={index}
+                className="producto"
+              >
                 <div className="contenedor-imagenes-background-card">
                   <img src={producto.image} alt={`Producto ${index + 1}`} />
                 </div>
                 <span>{producto.text}</span>
-              </div>
+              </Link>
             ))
           ) : (
             <p className="mensaje-no-encontrado">Búsqueda no encontrada</p>
