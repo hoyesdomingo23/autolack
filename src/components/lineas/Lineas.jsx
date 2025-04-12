@@ -65,9 +65,15 @@ const Lineas = () => {
           {/* Cada imagen dentro de un div */}
           <div
             className="container-image-text-sale-landing"
-            onClick={handleAuxiliares}
+            onClick={handePoliuretano}
           >
-            <img src="/gato-molestando-redirecciones.jpg" alt="Camisas" />
+            <img src="/gato-molestando-redirecciones.jpg" alt="Jeans" />
+          </div>
+          <div
+            className="container-image-text-sale-landing"
+            onClick={handlePoliester}
+          >
+            <img src="/gato-molestando-redirecciones.jpg" alt="Vestidos" />
           </div>
           <div
             className="container-image-text-sale-landing"
@@ -83,15 +89,9 @@ const Lineas = () => {
           </div>
           <div
             className="container-image-text-sale-landing"
-            onClick={handlePoliester}
+            onClick={handleAuxiliares}
           >
-            <img src="/gato-molestando-redirecciones.jpg" alt="Vestidos" />
-          </div>
-          <div
-            className="container-image-text-sale-landing"
-            onClick={handePoliuretano}
-          >
-            <img src="/gato-molestando-redirecciones.jpg" alt="Jeans" />
+            <img src="/gato-molestando-redirecciones.jpg" alt="Camisas" />
           </div>
         </div>
       </div>

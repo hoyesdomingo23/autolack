@@ -93,18 +93,14 @@ const Home = () => {
         </button>
       </section>
       <section className="contenedor-titulo-h1-tecnologia-texto">
-        <h1>Autolack</h1>
+        <h1>Bienvenidos a Industrias Autolack SAS</h1>
         {/* <button>
           <a href="#">¿QUIÉNES SOMOS?</a>
         </button> */}
         <span>
-          GRICOAT de Colombia S.A.S., Grupo productor de
-          <b> resinas industriales y recubrimientos</b>, respaldado en la
-          experiencia y el conocimiento técnico, para innovar, diseñar y
-          desarrollar con tecnología propia,{" "}
-          <b>sistemas de protección y acabado; </b>
-          garantizando la calidad, el desempeño y la funcionalidad de su
-          portafolio de productos.
+        En <b>Industrias Autolack sas</b> desde nuestra creación en 2013, nos hemos consolidado como una empresa <b>confiable y destacada</b> en el ámbito del repintado automotriz e industrial. Nos caracterizamos por ofrecer soluciones de pintura de <b>altísima calidad a precios accesibles</b>, asegurando que cada cliente obtenga resultados excepcionales sin comprometer su presupuesto.
+En Industrias Autolack sas, contamos con un equipo con amplia <b>experiencia y compromiso</b>, garantizando que cada proyecto refleje <b>precisión, durabilidad y estética impecable.</b>
+Nuestra pasión por la excelencia y el servicio al cliente nos impulsa a seguir creciendo y desarrollando productos que respalden la <b>elegancia y funcionalidad</b> de los acabados automotrices e industriales. Confíe en nosotros, y descubra cómo transformamos cualquier vehículo o proyecto industrial con <b>calidad y dedicación.</b>
         </span>
       </section>
       <section className="contenedor-imagenes-presentacion-home">

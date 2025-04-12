@@ -33,9 +33,11 @@
 }
 
 .contenedor-titulo-h1-tecnologia-texto span {
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
   width: 1000px;
   margin-top: 20px;
 }
+.contenedor-titulo-h1-tecnologia-texto b {font-family: Georgia, 'Times New Roman', Times, serif !important;}
 
 @media screen and (max-width: 768px) {
   .contenedor-titulo-h1-tecnologia-texto span {

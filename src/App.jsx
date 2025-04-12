@@ -15,7 +15,7 @@ import Madera from "./components/lineas/madera/Madera";
 import ProductoMadera from "./components/lineas/madera/ProductoMadera";
 import Auxiliares from "./components/lineas/auxiliares/Auxiliares";
 import ProductoAuxiliares from "./components/lineas/auxiliares/ProductoAuxiliares";
-import Poliester from "./components/lineas/poliester/poliester";
+import Poliester from "./components/lineas/poliester/Poliester";
 import ProductoPoliester from "./components/lineas/poliester/ProductoPoliester";
 
 function App() {

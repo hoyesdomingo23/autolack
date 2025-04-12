@@ -40,7 +40,7 @@ const ProductoPoliuretano = () => {
         <div className="producto-detalle-info">
           <h1>{productoSeleccionado.text}</h1>
           <p>{productoSeleccionado.description}</p>
-          <h4>{"Material:" + " " + productoSeleccionado.type}</h4>
+          <h4>{"Sistema:" + " " + productoSeleccionado.type}</h4>
           <a
             href={productoSeleccionado.pdf}
             download
