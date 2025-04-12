@@ -33,7 +33,7 @@
   margin-bottom: 10px;
 }
 
-button {
+.espacio button {
   width: 100%;
   padding: 10px;
   background-color: #f4f4f4;
@@ -44,7 +44,7 @@ button {
   text-align: left;
 }
 
-button:hover {
+.espacio button:hover {
   background-color: #e0e0e0;
 }
 

@@ -1,49 +1,34 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Header from "../header/Header";
-import Footer from "../footer/Footer";
-import ProductosLineas from "./ProductosLineas";
-import { useNavigate } from "react-router-dom";
-import "./Lineas.css";
-import bannerProductos from "../images/banner-bonito-pintuco-2.jpg";
-import bannerProductosM from "../images/banner-bonito-pintuco-m.jpg";
+import Header from "../../header/Header";
+import Footer from "../../footer/Footer";
+import datosProductoPoliuretano from "./datosProductoPoliuretano"; // Importa los datos correctamente
+import "./ProductoPoliuretano.css";
+import bannerProductos from "../../images/banner-bonito-pintuco-2.jpg";
+import bannerProductosM from "../../images/banner-bonito-pintuco-m.jpg";
 
-const Lineas = () => {
-  const navigateProductos = useNavigate();
-  const handleAuxiliares = () => {
-    navigateProductos("/auxiliares");
-  };
-  const handleIndustria = () => {
-    navigateProductos("/industria");
-  };
-  const handleMadera = () => {
-    navigateProductos("/madera");
-  };
-  const handlePoliester = () => {
-    navigateProductos("/poliester");
-  };
-  const handePoliuretano = () => {
-    navigateProductos("/poliuretano");
-  };
-  const [productos, setProductos] = useState(ProductosLineas);
+const Poliuretano = () => {
+  const [productos, setProductos] = useState(datosProductoPoliuretano);
   const [busqueda, setBusqueda] = useState("");
   const [mostrarOpciones, setMostrarOpciones] = useState(false);
 
+  // Función para manejar el filtro por búsqueda
   const manejarBusqueda = (e) => {
     setBusqueda(e.target.value);
-    const filtrados = ProductosLineas.filter((producto) =>
+    const filtrados = datosProductoPoliuretano.filter((producto) =>
       producto.text.toLowerCase().includes(e.target.value.toLowerCase())
     );
     setProductos(filtrados.length > 0 ? filtrados : []);
   };
 
+  // Función para manejar el orden de los productos
   const manejarOrden = (tipoOrden) => {
     if (tipoOrden === "az") {
       setProductos([...productos].sort((a, b) => a.text.localeCompare(b.text)));
     } else if (tipoOrden === "za") {
       setProductos([...productos].sort((a, b) => b.text.localeCompare(a.text)));
     } else {
-      setProductos(ProductosLineas);
+      setProductos(datosProductoPoliuretano);
     }
     setMostrarOpciones(false);
   };
@@ -56,46 +41,10 @@ const Lineas = () => {
         <img src={bannerProductosM} alt="Banner Productos" />
       </picture>
       <div className="contenedor-h2-productos">
-        <h2>Descubre todos nuestros productos!</h2>
+        <h2>Descubre todos nuestros productos con poliuretano!</h2>
       </div>
 
-      {/* Nueva sección con imágenes */}
-      <div className="backgroundAccesos">
-        <div className="container-complet-sale-landing-page-first">
-          {/* Cada imagen dentro de un div */}
-          <div
-            className="container-image-text-sale-landing"
-            onClick={handleAuxiliares}
-          >
-            <img src="/gato-molestando-redirecciones.jpg" alt="Camisas" />
-          </div>
-          <div
-            className="container-image-text-sale-landing"
-            onClick={handleIndustria}
-          >
-            <img src="/gato-molestando-redirecciones.jpg" alt="Faldas" />
-          </div>
-          <div
-            className="container-image-text-sale-landing"
-            onClick={handleMadera}
-          >
-            <img src="/gato-molestando-redirecciones.jpg" alt="Chaquetas" />
-          </div>
-          <div
-            className="container-image-text-sale-landing"
-            onClick={handlePoliester}
-          >
-            <img src="/gato-molestando-redirecciones.jpg" alt="Vestidos" />
-          </div>
-          <div
-            className="container-image-text-sale-landing"
-            onClick={handePoliuretano}
-          >
-            <img src="/gato-molestando-redirecciones.jpg" alt="Jeans" />
-          </div>
-        </div>
-      </div>
-
+      {/* Controles de filtro */}
       <div className="filtros">
         <div className="menu-filtro">
           <button
@@ -128,7 +77,7 @@ const Lineas = () => {
           {productos.length > 0 ? (
             productos.map((producto, index) => (
               <Link
-                to={`/productos/${encodeURIComponent(producto.text)}`}
+                to={`/ProductoPoliuretano/${encodeURIComponent(producto.text)}`}
                 key={index}
                 className="producto"
               >
@@ -148,4 +97,4 @@ const Lineas = () => {
   );
 };
 
-export default Lineas;
+export default Poliuretano;
