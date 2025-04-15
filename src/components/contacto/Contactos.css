@@ -1,0 +1,226 @@
+/* Estilos generales */
+.contenedor-imagen-texto-ayudar {
+  width: 100%;
+  height: auto;
+}
+
+.contenedor-imagen-texto-ayudar img {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 150px;
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.contenedor-texto-sobre-imagen {
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  position: absolute;
+  background-color: white;
+  top: 30%;
+  border-radius: 0 20px 0 0;
+  padding: 5%;
+}
+
+.subcontenedor-texto-sobre-imagen {
+  padding: 50px 60px;
+}
+
+.subcontenedor-texto-sobre-imagen h2 {
+  margin-bottom: 20px;
+  font-size: 3vw;
+}
+
+.subcontenedor-texto-sobre-imagen b {
+  color: #125099;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .contenedor-texto-sobre-imagen {
+    width: 95%;
+    top: 30%;
+    padding: 10px;
+  }
+  .subcontenedor-texto-sobre-imagen {
+    padding: 50px 0px;
+  }
+  .subcontenedor-texto-sobre-imagen h2 {
+    font-size: 24px;
+  }
+
+  .subcontenedor-texto-sobre-imagen span {
+    font-size: 16px;
+  }
+  .contenedor-imagen-texto-ayudar img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 379px;
+  }
+}
+
+/* Estilos generales para la versión desktop */
+.contenedor-oficina-principal-contactenos {
+  display: flex; /* Mantiene flexbox */
+  align-items: flex-start; /* Alinea los elementos al inicio */
+  gap: 15px; /* Margen entre la imagen y los textos */
+}
+
+.contenedor-oficina-principal-contactenos img {
+  margin-left: 70px;
+  width: auto;
+  max-width: calc(70% - 120px);
+  border-radius: 20px;
+}
+
+.contenedor-oficina-principal-contactenos h3,
+.contenedor-oficina-principal-contactenos p,
+.contenedor-oficina-principal-contactenos span {
+  margin-left: 15px;
+}
+
+.contenedor-oficina-principal-contactenos h3 {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.contenedor-oficina-principal-contactenos span {
+  margin-bottom: 10px;
+}
+
+.contenedor-oficina-principal-contactenos p {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor-oficina-principal-contactenos {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+  }
+
+  .contenedor-oficina-principal-contactenos img {
+    width: 100%;
+    margin-left: 3px;
+    max-width: 100%;
+    border-radius: 1px;
+    margin-bottom: -47px;
+  }
+
+  .contenedor-oficina-principal-contactenos h3,
+  .contenedor-oficina-principal-contactenos p,
+  .contenedor-oficina-principal-contactenos span {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+}
+
+.contenedor-textos-contactenos {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 10vh;
+  margin-bottom: 33px;
+}
+
+.h2-contacto-oficina-principal {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin-left: 73px;
+  color: #125099;
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .h2-contacto-oficina-principal {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 0px;
+  }
+}
+
+/* From Uiverse.io by G4b413l */
+.buttonDownload {
+  display: inline-block;
+  position: relative;
+  padding: 10px 25px;
+  background-color: #125099;
+  color: white;
+  font-family: sans-serif;
+  text-decoration: none;
+  font-size: 0.9em;
+  text-align: center;
+  text-indent: 15px;
+  cursor: pointer;
+  border: none;
+  margin-left: 15px;
+}
+
+.buttonDownload:hover {
+  background-color: #125099;
+  color: white;
+}
+
+.buttonDownload:before,
+.buttonDownload:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 15px;
+  top: 52%;
+}
+
+.buttonDownload:before {
+  width: 10px;
+  height: 2px;
+  border-style: solid;
+  border-width: 0 2px 2px;
+}
+
+.buttonDownload:after {
+  width: 0;
+  height: 0;
+  margin-left: 3px;
+  margin-top: -7px;
+  border-style: solid;
+  border-width: 4px 4px 0 4px;
+  border-color: transparent;
+  border-top-color: inherit;
+  animation: downloadArrow 1s linear infinite;
+  animation-play-state: paused;
+}
+
+.buttonDownload:hover:before {
+  border-color: #cdefbd;
+}
+
+.buttonDownload:hover:after {
+  border-top-color: #cdefbd;
+  animation-play-state: running;
+}
+
+@keyframes downloadArrow {
+  0% {
+    margin-top: -7px;
+    opacity: 1;
+  }
+
+  0.001% {
+    margin-top: -15px;
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    margin-top: 0;
+    opacity: 0.4;
+  }
+}

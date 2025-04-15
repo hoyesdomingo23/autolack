@@ -25,6 +25,10 @@ const Header = () => {
   const handleFichasTecnicas = () => {
     navigate("/fichas-tecnicas");
   };
+
+  const handleContacto = () => {
+    navigate("/contacto");
+  };
   return (
     <>
       <header className="estilos-para-header">
@@ -50,11 +54,8 @@ const Header = () => {
               FICHAS TÉCNICAS
             </li>
             {/* <li className="estilos-para-item">MISIÓN Y VISIÓN</li> */}
-            <li className="estilos-para-item">
-              {" "}
-              <a href="https://api.whatsapp.com/message/QHMKJUJPPTZHP1?autoload=1&app_absent=0">
-                CONTACTO
-              </a>
+            <li className="estilos-para-item" onClick={handleContacto}>
+              CONTACTO
             </li>
           </ul>
 
@@ -99,11 +100,7 @@ const Header = () => {
                 <li onClick={handleLineas}>LINEAS</li>
                 <li onClick={handleFichasTecnicas}>FICHAS TÉCNICAS</li>
                 {/* <li>MISIÓN Y VISIÓN</li> */}
-                <li>
-                  <a href="https://api.whatsapp.com/message/QHMKJUJPPTZHP1?autoload=1&app_absent=0">
-                    CONTACTO
-                  </a>
-                </li>
+                <li onClick={handleContacto}>Contacto</li>
               </ul>
             </div>
           </div>

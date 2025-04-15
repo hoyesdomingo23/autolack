@@ -7,6 +7,12 @@ import { useNavigate } from "react-router-dom";
 import "./Lineas.css";
 import bannerProductos from "../images/banner-bonito-pintuco-2.jpg";
 import bannerProductosM from "../images/banner-bonito-pintuco-m.jpg";
+import imagenAuxiliar from "../images/Linea-Auxiliar.jpg";
+import imagenIndustrial from "../images/Linea-Industria.jpg";
+import imagenMadera from "../images/Linea-Madera.jpg";
+import imagenMonocomponente from "../images/Linea-Monocomponente.jpg";
+import imagenPoliester from "../images/Linea-Poliester.jpg";
+import imagenPoliuretano from "../images/Linea-Poliuretano.jpg";
 
 const Lineas = () => {
   const navigateProductos = useNavigate();
@@ -24,6 +30,9 @@ const Lineas = () => {
   };
   const handePoliuretano = () => {
     navigateProductos("/poliuretano");
+  };
+  const handleMonocomponentes = () => {
+    navigateProductos("/Monocomponentes");
   };
   const [productos, setProductos] = useState(ProductosLineas);
   const [busqueda, setBusqueda] = useState("");
@@ -67,31 +76,37 @@ const Lineas = () => {
             className="container-image-text-sale-landing"
             onClick={handePoliuretano}
           >
-            <img src="/gato-molestando-redirecciones.jpg" alt="Jeans" />
+            <img src={imagenPoliuretano} alt="Poliuretano" />
           </div>
           <div
             className="container-image-text-sale-landing"
             onClick={handlePoliester}
           >
-            <img src="/gato-molestando-redirecciones.jpg" alt="Vestidos" />
+            <img src={imagenPoliester} alt="Poliester" />
           </div>
           <div
             className="container-image-text-sale-landing"
             onClick={handleIndustria}
           >
-            <img src="/gato-molestando-redirecciones.jpg" alt="Faldas" />
+            <img src={imagenIndustrial} alt="Industria" />
           </div>
           <div
             className="container-image-text-sale-landing"
             onClick={handleMadera}
           >
-            <img src="/gato-molestando-redirecciones.jpg" alt="Chaquetas" />
+            <img src={imagenMadera} alt="Madera" />
           </div>
           <div
             className="container-image-text-sale-landing"
             onClick={handleAuxiliares}
           >
-            <img src="/gato-molestando-redirecciones.jpg" alt="Camisas" />
+            <img src={imagenAuxiliar} alt="Auxiliares" />
+          </div>
+          <div
+            className="container-image-text-sale-landing"
+            onClick={handleMonocomponentes}
+          >
+            <img src={imagenMonocomponente} alt="Monocomponentes" />
           </div>
         </div>
       </div>
