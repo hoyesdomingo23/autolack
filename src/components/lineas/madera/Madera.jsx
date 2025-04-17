@@ -4,8 +4,8 @@ import Header from "../../header/Header";
 import Footer from "../../footer/Footer";
 import datosProductoMadera from "./datosProductoMadera"; // Importa los datos correctamente
 import "./ProductoMadera.css";
-import bannerProductos from "../../images/banner-bonito-pintuco-2.jpg";
-import bannerProductosM from "../../images/banner-bonito-pintuco-m.jpg";
+import bannerProductos from "../../images/Madera1920x920.jpg";
+import bannerProductosM from "../../images/Madera1000x500.jpg";
 
 const Madera = () => {
   const [productos, setProductos] = useState(datosProductoMadera);

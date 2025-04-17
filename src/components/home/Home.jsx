@@ -73,18 +73,25 @@ const Home = () => {
         >
           {"<"}
         </button>
-        <div className={`slider-image ${isAnimating ? "fade-out" : "fade-in"}`}>
-          <picture>
-            <source
-              srcSet={banners[currentIndex].desktop}
-              media="(min-width: 768px)"
-            />
-            <img
-              src={banners[currentIndex].mobile}
-              alt={banners[currentIndex].alt}
-            />
-          </picture>
+        <div className="contenedor-video-desktop">
+          <iframe
+            src="https://www.youtube.com/embed/yxlHuEKSnro?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&iv_load_policy=3&fs=0"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            style={{ width: "100%", height: "100vh", pointerEvents: "none" }}
+          />
         </div>
+        <div className="contenedor-video-mobile">
+          <iframe
+            src="https://www.youtube.com/embed/Ay3aCOh01zY?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&iv_load_policy=3&fs=0"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            style={{ width: "100%", height: "70vh", pointerEvents: "none" }}
+          />
+        </div>
+
         <button
           className="slider-button slider-button-right"
           onClick={goToNext}
@@ -98,9 +105,21 @@ const Home = () => {
           <a href="#">¿QUIÉNES SOMOS?</a>
         </button> */}
         <span>
-        En <b>Industrias Autolack sas</b> desde nuestra creación en 2013, nos hemos consolidado como una empresa <b>confiable y destacada</b> en el ámbito del repintado automotriz e industrial. Nos caracterizamos por ofrecer soluciones de pintura de <b>altísima calidad a precios accesibles</b>, asegurando que cada cliente obtenga resultados excepcionales sin comprometer su presupuesto.
-En Industrias Autolack sas, contamos con un equipo con amplia <b>experiencia y compromiso</b>, garantizando que cada proyecto refleje <b>precisión, durabilidad y estética impecable.</b>
-Nuestra pasión por la excelencia y el servicio al cliente nos impulsa a seguir creciendo y desarrollando productos que respalden la <b>elegancia y funcionalidad</b> de los acabados automotrices e industriales. Confíe en nosotros, y descubra cómo transformamos cualquier vehículo o proyecto industrial con <b>calidad y dedicación.</b>
+          En <b>Industrias Autolack sas</b> desde nuestra creación en 2013, nos
+          hemos consolidado como una empresa <b>confiable y destacada</b> en el
+          ámbito del repintado automotriz e industrial. Nos caracterizamos por
+          ofrecer soluciones de pintura de{" "}
+          <b>altísima calidad a precios accesibles</b>, asegurando que cada
+          cliente obtenga resultados excepcionales sin comprometer su
+          presupuesto. En Industrias Autolack sas, contamos con un equipo con
+          amplia <b>experiencia y compromiso</b>, garantizando que cada proyecto
+          refleje <b>precisión, durabilidad y estética impecable.</b>
+          Nuestra pasión por la excelencia y el servicio al cliente nos impulsa
+          a seguir creciendo y desarrollando productos que respalden la{" "}
+          <b>elegancia y funcionalidad</b> de los acabados automotrices e
+          industriales. Confíe en nosotros, y descubra cómo transformamos
+          cualquier vehículo o proyecto industrial con{" "}
+          <b>calidad y dedicación.</b>
         </span>
       </section>
       <section className="contenedor-imagenes-presentacion-home">
@@ -110,7 +129,7 @@ Nuestra pasión por la excelencia y el servicio al cliente nos impulsa a seguir 
       </section>
       <section className="map-section">
         <h2>¿Donde estamos ubicados?</h2>
-        <LoadScript googleMapsApiKey="AIzaSyAOFYDSJK__a0Wd4h52g7LO2ik84SBsDwE">
+        <LoadScript googleMapsApiKey="AIzaSyDqx20-I08sVsFpomEbZJ03TTUPjFH6sOg">
           <GoogleMap
             key={key} // La clave cambia, forzando la recreación del mapa
             mapContainerStyle={mapContainerStyle}

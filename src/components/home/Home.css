@@ -33,11 +33,13 @@
 }
 
 .contenedor-titulo-h1-tecnologia-texto span {
-  font-family: Georgia, 'Times New Roman', Times, serif !important;
+  font-family: Georgia, "Times New Roman", Times, serif !important;
   width: 1000px;
   margin-top: 20px;
 }
-.contenedor-titulo-h1-tecnologia-texto b {font-family: Georgia, 'Times New Roman', Times, serif !important;}
+.contenedor-titulo-h1-tecnologia-texto b {
+  font-family: Georgia, "Times New Roman", Times, serif !important;
+}
 
 @media screen and (max-width: 768px) {
   .contenedor-titulo-h1-tecnologia-texto span {
@@ -90,13 +92,30 @@
   z-index: 2;
   border-radius: 30px;
 }
-
+@media screen and (max-width: 768px) {
+  .contenedor-video-desktop {
+    display: none;
+  }
+  .contenedor-video-mobile {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contenedor-video-mobile {
+    display: none;
+  }
+}
+.contenedor-video-desktop {
+  width: 100%;
+}
 .slider-button-left {
   left: 10px;
+  display: none;
 }
 
 .slider-button-right {
   right: 10px;
+  display: none;
 }
 
 .slider-button:hover {

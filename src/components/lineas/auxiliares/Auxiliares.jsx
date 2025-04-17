@@ -4,8 +4,8 @@ import Header from "../../header/Header";
 import Footer from "../../footer/Footer";
 import datosProductoAuxiliares from "./datosProductoAuxiliares"; // Importa los datos correctamente
 import "./ProductoAuxiliares.css";
-import bannerProductos from "../../images/banner-bonito-pintuco-2.jpg";
-import bannerProductosM from "../../images/banner-bonito-pintuco-m.jpg";
+import bannerProductos from "../../images/Auxiliares1920x920.jpg";
+import bannerProductosM from "../../images/Auxiliares1000x500.jpg";
 
 const Auxiliares = () => {
   const [productos, setProductos] = useState(datosProductoAuxiliares);
