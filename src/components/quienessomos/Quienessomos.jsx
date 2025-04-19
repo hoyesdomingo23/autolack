@@ -4,9 +4,9 @@ import Footer from "../footer/Footer";
 import "./Quienessomos.css";
 import bannerDesktopNosotros from "../images/Quienessomos1920x920.jpg";
 import bannerMobileNosotros from "../images/Quienessomos1000x500.jpg";
-import politicasCalidadNosotros from "../images/calidad-nosotros-autolarck.jpg";
-import misionNosotros from "../images/mision-nosotros-autolarck.jpeg";
-import visionNosotros from "../images/vision-nosotros-autolarck.jpg";
+import politicasCalidadNosotros from "../images/Misión.jpg";
+import misionNosotros from "../images/Políticas-de-calidad-miniatura.jpg";
+import visionNosotros from "../images/Visión.jpg";
 
 const Quienessomos = () => {
   return (
@@ -28,16 +28,17 @@ const Quienessomos = () => {
           <div className="texto-izquierda">
             <h3>Políticas de Calidad</h3>
             <span>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod
-              malesuada.
-            </span>
-            <br />
-            <br />
-            <span>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod
-              malesuada.
+              En Industrias <b> Autolack S.A.S.</b>, con 12 años de experiencia
+              en Medellín, estamos firmemente comprometidos con la satisfacción
+              de nuestros clientes a nivel nacional, abarcando tanto el sector
+              de la industria como el automotriz, a través de la fabricación y
+              comercialización de productos de alta calidad que superen sus
+              expectativas. Buscamos la excelencia en cada uno de nuestros
+              productos mediante la selección de materias primas de primera,
+              procesos optimizados y un equipo humano capacitado, impulsando una
+              cultura de mejora continua y cumpliendo con las normativas
+              vigentes para consolidarnos como un proveedor confiable y
+              estratégico en el mercado <b> colombiano.</b>
             </span>
           </div>
           <div className="imagen-derecha">

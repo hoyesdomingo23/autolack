@@ -98,12 +98,20 @@ const datosProductoAuxiliares = [
     pdf: "/fichastecnicas/Diluyentesycomplementarios/FT SLN EPOXICA.pdf",
   },
   {
-    image: "/AUXILIAR.jpg",
+    image: "/MasillaAuxiliares.jpg",
     text: "MASILLA POLIESTER",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
     type: "Auxiliares",
     pdf: "/fichastecnicas/Diluyentesycomplementarios/FT SOLUCIÓN POLIURETANICA.pdf",
+  },
+  {
+    image: "/MasillaAuxiliares.jpg",
+    text: "MASILLA DE RELLENO",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+    type: "Auxiliares",
+    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
   },
   {
     image: "/AUXILIAR.jpg",
@@ -112,14 +120,6 @@ const datosProductoAuxiliares = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
     type: "Auxiliares",
     pdf: "/fichastecnicas/Entonadoresps/FT ENTONADORES PS.pdf",
-  },
-  {
-    image: "/AUXILIAR.jpg",
-    text: "MASILLA DE RELLENO",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    type: "Auxiliares",
-    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
   },
 ];
 

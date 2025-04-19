@@ -75,20 +75,20 @@ const Home = () => {
         </button>
         <div className="contenedor-video-desktop">
           <iframe
-            src="https://www.youtube.com/embed/yxlHuEKSnro?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&iv_load_policy=3&fs=0"
+            src="https://www.youtube.com/embed/yxlHuEKSnro?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&iv_load_policy=3&fs=0&loop=1&playlist=yxlHuEKSnro"
             frameBorder="0"
             allow="autoplay; encrypted-media"
             allowFullScreen
-            style={{ width: "100%", height: "100vh", pointerEvents: "none" }}
+            style={{ width: "100%", height: "100vh" }}
           />
         </div>
         <div className="contenedor-video-mobile">
           <iframe
-            src="https://www.youtube.com/embed/Ay3aCOh01zY?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&iv_load_policy=3&fs=0"
+            src="https://www.youtube.com/embed/Ay3aCOh01zY?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&iv_load_policy=3&fs=0&loop=1&playlist=Ay3aCOh01zY"
             frameBorder="0"
             allow="autoplay; encrypted-media"
             allowFullScreen
-            style={{ width: "100%", height: "70vh", pointerEvents: "none" }}
+            style={{ width: "100%", height: "70vh" }}
           />
         </div>
 
