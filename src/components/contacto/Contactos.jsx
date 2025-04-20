@@ -20,10 +20,11 @@ const Contactos = () => {
               <b>Hola</b>, ¿En que podemos ayudarte?
             </h2>
             <span>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime,
-              corporis. Minus laudantium alias magni, deleniti minima sint ex
-              repellendus est, quasi nesciunt delectus fugit atque dolorem ea,
-              amet blanditiis? Iusto.
+              ¿Necesitas contactar al equipo de <b> Autolack?</b> Estamos aquí
+              para ayudarte. Para información de productos, soporte técnico o
+              soluciones personalizadas, puede comunicarse directamente con
+              nuestros profesionales.Aquí están sus datos de contacto a
+              continuación. ¡Esperamos poder asistirte!
             </span>
           </div>
         </div>
@@ -72,7 +73,10 @@ const Contactos = () => {
               <b>contacto: </b>3146298834- 3114060547
             </p>
           </div>
-          <a href="#" className="button">
+          <a
+            href="https://api.whatsapp.com/send?phone=573146298834"
+            className="button"
+          >
             WHATSAPP
           </a>
         </div>
@@ -86,7 +90,10 @@ const Contactos = () => {
               <b>contacto: </b>3113225677
             </p>
           </div>
-          <a href="#" className="button">
+          <a
+            href="https://api.whatsapp.com/send?phone=573113225677"
+            className="button"
+          >
             WHATSAPP
           </a>
         </div>
@@ -100,7 +107,10 @@ const Contactos = () => {
               <b>contacto: </b>3122305536
             </p>
           </div>
-          <a href="#" className="button">
+          <a
+            href="https://api.whatsapp.com/send?phone=573122305536"
+            className="button"
+          >
             WHATSAPP
           </a>
         </div>
@@ -116,7 +126,10 @@ const Contactos = () => {
               <b>contacto: </b>3044190939
             </p>
           </div>
-          <a href="#" className="button">
+          <a
+            href="https://api.whatsapp.com/send?phone=573044190939"
+            className="button"
+          >
             WHATSAPP
           </a>
         </div>
@@ -124,13 +137,16 @@ const Contactos = () => {
           <img src={imagenSegundoVendedor} className="image" />
 
           <div className="card-info">
-            <span>Hugo Vargas Beltran</span>
+            <span>HUGO VARGAS BELTRAN</span>
             <p>DISTRIBUIDOR MEDELLÍN</p>
             <p>
               <b>contacto: </b>3103738958
             </p>
           </div>
-          <a href="#" className="button">
+          <a
+            href="https://api.whatsapp.com/send?phone=573103738958"
+            className="button"
+          >
             WHATSAPP
           </a>
         </div>

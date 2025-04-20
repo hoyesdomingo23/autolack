@@ -115,21 +115,21 @@ const ProductosLineas = [
     pdf: "/fichastecnicas/Barnices/FT BARNIZ PLUS 2K.pdf",
   },
   {
-    image: "/POLIURETANO.jpg",
+    image: "/AUXILIAR.jpg",
     text: "CATALIZADOR 412",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
     pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
   },
   {
-    image: "/POLIURETANO.jpg",
+    image: "/AUXILIAR.jpg",
     text: "CATALIZADOR 410",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
     pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
   },
   {
-    image: "/POLIURETANO.jpg",
+    image: "/MasillaAuxiliares.jpg",
     text: "Masilla 1",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",

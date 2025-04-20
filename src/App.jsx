@@ -20,6 +20,7 @@ import ProductoPoliester from "./components/lineas/poliester/ProductoPoliester";
 import Monocomponentes from "./components/lineas/monocomponentes/Monocomponentes";
 import ProductoMonocomponentes from "./components/lineas/monocomponentes/ProductoMonocomponentes";
 import Contactos from "./components/contacto/Contactos";
+import LandingNuevo from "./components/Nuevo/LandingNuevo";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/nosotros" element={<Quienessomos />} />
           <Route path="/lineas" element={<Lineas />} />
           <Route path="/contacto" element={<Contactos />} />
+          <Route path="/nuevo" element={<LandingNuevo />} />
           <Route path="/fichas-tecnicas" element={<FichasTecnicas />} />
           {/* Lineas/Categorias */}
           <Route path="/Poliuretano" element={<Poliuretano />} />

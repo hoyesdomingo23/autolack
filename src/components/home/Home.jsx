@@ -2,15 +2,22 @@ import React, { useState, useEffect } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import imagenDesktop from "../images/BANNER-PINTUCO-principal-desktop.png";
 import imagenMobile from "../images/BANNER-PINTUCO-principal-mobile.jpg";
-import imagenUnoHome from "../images/banner-uno-prueba-autolack.jpg";
-import imagenDosHome from "../images/banner-dos-prueba-autolack.jpg";
+import imagenUnoHome from "../images/Lanzamientos-miniatura.jpg";
+import imagenDosHome from "../images/Cartacolores.jpg";
 import imagenTresHome from "../images/banner-tres-prueba-autolack.jpg";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import "./Home.css";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [key, setKey] = useState(0); // Clave para forzar la recreación del mapa
+
+  const navigateHome = useNavigate();
+
+  const handleNuevoHome = () => {
+    navigateHome("/nuevo");
+  };
 
   useEffect(() => {
     // Forzar la recreación del mapa cuando el componente se monta
@@ -122,9 +129,123 @@ const Home = () => {
           <b>calidad y dedicación.</b>
         </span>
       </section>
+      <section className="truck-testla">
+        <div className="truck">
+          <div className="truck__body">
+            <div className="truck__body truck__body--top">
+              <div className="truck__window">
+                <div className="truck__window-glass"></div>
+              </div>
+            </div>
+            <div className="truck__body truck__body--mid">
+              <div className="truck__mid-body"></div>
+            </div>
+            <div className="truck__body truck__body--bottom">
+              <div className="truck__underpanel"></div>
+              <div className="truck__rear-bumper"></div>
+              <div className="truck__side-skirt"></div>
+            </div>
+          </div>
+          <div className="truck__wheel truck__wheel--front">
+            <div className="truck__wheel-arch"></div>
+            <div className="truck__wheel-arch-trim truck__wheel-arch-trim--top"></div>
+            <div className="truck__wheel-arch-trim truck__wheel-arch-trim--left"></div>
+            <div className="truck__wheel-arch-trim truck__wheel-arch-trim--right"></div>
+            <div className="truck-wheel">
+              <div className="truck-wheel__rim">
+                <div
+                  style={{ "--index": 0 }}
+                  className="truck-wheel__spoke"
+                ></div>
+                <div
+                  style={{ "--index": 1 }}
+                  className="truck-wheel__spoke"
+                ></div>
+                <div
+                  style={{ "--index": 2 }}
+                  className="truck-wheel__spoke"
+                ></div>
+                <div
+                  style={{ "--index": 3 }}
+                  className="truck-wheel__spoke"
+                ></div>
+                <div
+                  style={{ "--index": 4 }}
+                  className="truck-wheel__spoke"
+                ></div>
+                <div
+                  style={{ "--index": 5 }}
+                  className="truck-wheel__spoke"
+                ></div>
+                <div
+                  style={{ "--index": 6 }}
+                  className="truck-wheel__spoke"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div className="truck__wheel truck__wheel--rear">
+            <div className="truck__wheel-arch"></div>
+            <div className="truck__wheel-arch-trim truck__wheel-arch-trim--top"></div>
+            <div className="truck__wheel-arch-trim truck__wheel-arch-trim--left"></div>
+            <div className="truck__wheel-arch-trim truck__wheel-arch-trim--right"></div>
+            <div className="truck-wheel">
+              <div className="truck-wheel__rim">
+                <div
+                  style={{ "--index": 0 }}
+                  className="truck-wheel__spoke"
+                ></div>
+                <div
+                  style={{ "--index": 1 }}
+                  className="truck-wheel__spoke"
+                ></div>
+                <div
+                  style={{ "--index": 2 }}
+                  className="truck-wheel__spoke"
+                ></div>
+                <div
+                  style={{ "--index": 3 }}
+                  className="truck-wheel__spoke"
+                ></div>
+                <div
+                  style={{ "--index": 4 }}
+                  className="truck-wheel__spoke"
+                ></div>
+                <div
+                  style={{ "--index": 5 }}
+                  className="truck-wheel__spoke"
+                ></div>
+                <div
+                  style={{ "--index": 6 }}
+                  className="truck-wheel__spoke"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div className="truck__headlight"></div>
+          <div className="truck__taillight"></div>
+          <div className="truck__indicator"></div>
+          <div className="truck__foglight"></div>
+        </div>
+      </section>
+
       <section className="contenedor-imagenes-presentacion-home">
-        <img src={imagenUnoHome} alt="Banner Uno"></img>
-        <img src={imagenDosHome} alt="Banner Dos"></img>
+        <img
+          src={imagenUnoHome}
+          alt="Banner Uno"
+          onClick={handleNuevoHome}
+        ></img>
+        <a></a>
+        <img
+          src={imagenDosHome}
+          alt="Banner Dos"
+          onClick={() => {
+            window.location.href =
+              "https://online.flippingbook.com/view/750686242/";
+          }}
+          style={{ cursor: "pointer" }}
+        />
+
         <img src={imagenTresHome} alt="Banner Tres"></img>
       </section>
       <section className="map-section">
