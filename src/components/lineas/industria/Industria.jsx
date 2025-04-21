@@ -41,7 +41,7 @@ const Industria = () => {
         <img src={bannerProductosM} alt="Banner Productos" />
       </picture>
       <div className="contenedor-h2-productos">
-        <h2>Descubre todos nuestros productos para industria!</h2>
+        <h2>¡Descubre todos nuestros productos para industria!</h2>
       </div>
 
       {/* Controles de filtro */}

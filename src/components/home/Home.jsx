@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import imagenDesktop from "../images/BANNER-PINTUCO-principal-desktop.png";
 import imagenMobile from "../images/BANNER-PINTUCO-principal-mobile.jpg";
-import imagenUnoHome from "../images/Lanzamientos-miniatura.jpg";
+import imagenUnoHome from "../images/Lanzamientos-miniatura-texto.jpg";
 import imagenDosHome from "../images/Cartacolores.jpg";
 import imagenTresHome from "../images/banner-tres-prueba-autolack.jpg";
 import Header from "../header/Header";
@@ -246,7 +246,7 @@ const Home = () => {
           style={{ cursor: "pointer" }}
         />
 
-        <img src={imagenTresHome} alt="Banner Tres"></img>
+        {/* <img src={imagenTresHome} alt="Banner Tres"></img> */}
       </section>
       <section className="map-section">
         <h2>¿Donde estamos ubicados?</h2>

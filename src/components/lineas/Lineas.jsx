@@ -65,7 +65,7 @@ const Lineas = () => {
         <img src={bannerProductosM} alt="Banner Productos" />
       </picture>
       <div className="contenedor-h2-productos">
-        <h2>Descubre todos nuestros productos!</h2>
+        <h2>¡Descubre todos nuestros productos!</h2>
       </div>
 
       {/* Nueva sección con imágenes */}

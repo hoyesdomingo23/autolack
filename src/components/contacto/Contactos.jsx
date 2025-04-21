@@ -7,6 +7,7 @@ import imagenOficcina from "../images/Meyn-NL.jpg";
 import imagenPrimerVendedor from "../images/Santiago.jpg";
 import imagenTercerVendedor from "../images/JohnMarioTorresAlmanza.jpg";
 import imagenSegundoVendedor from "../images/HugoVargasBeltran.jpg";
+import imagencuartoVendedor from "../images/Pinescol.png";
 
 const Contactos = () => {
   return (
@@ -70,7 +71,7 @@ const Contactos = () => {
             <span>SANTIAGO GAVIRIA</span>
             <p>VENDEDOR ZONA EJE CAFETERO</p>
             <p>
-              <b>contacto: </b>3146298834- 3114060547
+              <b>contacto: </b>3146298834
             </p>
           </div>
           <a
@@ -117,7 +118,7 @@ const Contactos = () => {
       </section>
       <section className="contenedor-vendedores-regiones">
         <div className="card">
-          <img src={imagenPrimerVendedor} className="image" />
+          <img src={imagencuartoVendedor} className="image" />
 
           <div className="card-info">
             <span>PINESCOL</span>

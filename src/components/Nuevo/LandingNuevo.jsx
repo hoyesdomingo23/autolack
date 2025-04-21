@@ -3,6 +3,8 @@ import "./LandingNuevo.css";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import ImagenNuevosPrimero from "../images/Lanzamientos800x1000.png";
+import bannerNuevoDesktop from "../images/Nuevos-productos-1920x920.jpg";
+import bannerNuevoMobile from "../images/Nuevos-productos-1000x500.jpg";
 
 const LandingNuevo = () => {
   const [index, setIndex] = useState(0); // Estado para manejar el índice de los productos
@@ -30,6 +32,10 @@ const LandingNuevo = () => {
   return (
     <>
       <Header />
+      <picture className="contenedor-imagen-productos">
+        <source srcSet={bannerNuevoDesktop} media="(min-width: 768px)"></source>
+        <img src={bannerNuevoMobile} alt="Fichas Técnicas Banner" />
+      </picture>
       <div className="h2-nuevos-productos">
         <h2>Nuestros nuevos productos</h2>
       </div>

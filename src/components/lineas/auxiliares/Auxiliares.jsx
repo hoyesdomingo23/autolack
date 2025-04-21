@@ -41,7 +41,7 @@ const Auxiliares = () => {
         <img src={bannerProductosM} alt="Banner Productos" />
       </picture>
       <div className="contenedor-h2-productos">
-        <h2>Descubre todos nuestros productos con Auxiliares!</h2>
+        <h2>¡Descubre todos nuestros productos con Auxiliares!</h2>
       </div>
 
       {/* Controles de filtro */}

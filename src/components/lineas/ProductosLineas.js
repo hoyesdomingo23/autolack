@@ -6,7 +6,7 @@ const ProductosLineas = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
 
     type: "Poliuretano",
-    pdf: "/fichastecnicas/Barnices/FT BARNIZ HS.pdf",
+    pdf: "/fichastecnicas/Entonadoresyesmaltespur/FT ENTONADORES Y ESMALTES PUR.pdf",
   },
   {
     image: "/POLIURETANO.jpg",
@@ -14,7 +14,7 @@ const ProductosLineas = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
     type: "Poliuretano",
-    pdf: "/fichastecnicas/Diluyentesycomplementarios/FT DILUYENTE PUR ATL.pdf",
+    pdf: "/fichastecnicas/Entonadoresyesmaltespur/FT ENTONADORES Y ESMALTES PUR.pdf",
   },
   {
     image: "/POLIURETANO.jpg",
@@ -22,7 +22,7 @@ const ProductosLineas = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
     type: "Poliuretano",
-    pdf: "/fichastecnicas/Diluyentesycomplementarios/FT REMOVEDOR DE OXIDO.pdf",
+    pdf: "/fichastecnicas/Entonadoresyesmaltespur/FT ENTONADORES Y ESMALTES PUR.pdf",
   },
   {
     image: "/POLIESTER.jpg",
@@ -31,7 +31,7 @@ const ProductosLineas = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
 
     type: "Poliester",
-    pdf: "/fichastecnicas/Barnices/FT BARNIZ PLUS 2K.pdf",
+    pdf: "/fichastecnicas/Entonadoresps/FT ENTONADORES PS.pdf",
   },
   {
     image: "/POLIESTER.jpg",
@@ -40,7 +40,7 @@ const ProductosLineas = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
 
     type: "Poliester",
-    pdf: "/fichastecnicas/Barnices/FT BARNIZ HS.pdf",
+    pdf: "/fichastecnicas/Entonadoresps/FT ENTONADORES PS.pdf",
   },
   {
     image: "/POLIESTER.jpg",
@@ -48,28 +48,28 @@ const ProductosLineas = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
     type: "Poliester",
-    pdf: "/fichastecnicas/Diluyentesycomplementarios/FT DESENGRASANTE B.S.pdf",
+    pdf: "/fichastecnicas/Entonadoresps/FT ENTONADORES PS.pdf",
   },
   {
     image: "/POLIURETANO.jpg",
     text: "BARNIZ PLUS 2K",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/fichastecnicas/Barnices/FT BARNIZ PLUS 2K.pdf",
+    pdf: "/fichastecnicas/Barnices/FTBARNIZPLUS2K.pdf",
   },
   {
     image: "/POLIURETANO.jpg",
     text: "Barniz HS",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/fichastecnicas/Barnices/FT BARNIZ HS.pdf",
+    pdf: "/fichastecnicas/Barnices/FTBARNIZHS.pdf",
   },
   {
     image: "/POLIURETANO.jpg",
     text: "BARNIZ EXPRESS",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/fichastecnicas/Barnices/FT BARNIZ EXPRESS.pdf",
+    pdf: "/fichastecnicas/Barnices/FTBARNIZEXPRESS.pdf",
   },
   {
     image: "/MONOCOMPONENTE.jpg",
@@ -77,7 +77,7 @@ const ProductosLineas = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
     type: "Monocomponentes",
-    pdf: "/fichastecnicas/Diluyentesycomplementarios/FT DESENGRASANTE B.S.pdf",
+    pdf: "/fichastecnicas/Fondos/FT FONDOS 2K",
   },
   {
     image: "/MONOCOMPONENTE.jpg",
@@ -85,7 +85,7 @@ const ProductosLineas = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
     type: "Monocomponentes",
-    pdf: "/fichastecnicas/Diluyentesycomplementarios/FT DILUYENTE PUR ATL.pdf",
+    pdf: "/fichastecnicas/Entonadoresyesmaltespur/FT ENTONADORES Y ESMALTES PUR.pdf",
   },
   {
     image: "/MONOCOMPONENTE.jpg",
@@ -94,7 +94,7 @@ const ProductosLineas = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
 
     type: "Monocomponentes",
-    pdf: "/fichastecnicas/Barnices/FT BARNIZ HS.pdf",
+    pdf: "/fichastecnicas/Entonadoresyesmaltespur/FT ENTONADORES Y ESMALTES PUR.pdf",
   },
   {
     image: "/ENDMADERA.jpg",
@@ -119,21 +119,21 @@ const ProductosLineas = [
     text: "CATALIZADOR 412",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
+    pdf: "/fichastecnicas/Auxiliares/FT CATALIZADOR PUR 412.pdf",
   },
   {
     image: "/AUXILIAR.jpg",
     text: "CATALIZADOR 410",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
+    pdf: "/fichastecnicas/Auxiliares/FT CATALIZADOR PUR 410.pdf",
   },
   {
     image: "/MasillaAuxiliares.jpg",
-    text: "Masilla 1",
+    text: "Masilla ",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
-    pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
+    pdf: "/fichastecnicas/Masillas/FT MASILLA.pdf",
   },
 ];
 

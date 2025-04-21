@@ -41,7 +41,7 @@ const Madera = () => {
         <img src={bannerProductosM} alt="Banner Productos" />
       </picture>
       <div className="contenedor-h2-productos">
-        <h2>Descubre nuestros productos para madera!</h2>
+        <h2>¡Descubre nuestros productos para madera!</h2>
       </div>
 
       {/* Controles de filtro */}

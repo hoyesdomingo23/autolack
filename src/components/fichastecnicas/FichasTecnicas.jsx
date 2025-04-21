@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./FichasTecnicas.css";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import imageFichasTecnicasDesktop from "../images/banner-bonito-pintuco-2.jpg";
-import imageFichasTecnicasMobile from "../images/banner-bonito-pintuco-m.jpg";
+import imageFichasTecnicasDesktop from "../images/Fichas-tecnicas-1920x920.jpg";
+import imageFichasTecnicasMobile from "../images/Fichas-tecnicas-1000x500.jpg";
 
 const FichasTecnicas = () => {
   const [openAutomotriz, setOpenAutomotriz] = useState({}); // Estado para las opciones de automotriz
@@ -14,106 +14,120 @@ const FichasTecnicas = () => {
     Barnices: [
       {
         name: "Barniz HS",
-        pdf: "/fichastecnicas/Barnices/FT BARNIZ HS.pdf",
+        pdf: "/fichastecnicas/Barnices/FTBARNIZHS.pdf",
       },
       {
         name: "BARNIZ PLUS 2K",
-        pdf: "/fichastecnicas/Barnices/FT BARNIZ PLUS 2K.pdf",
+        pdf: "/fichastecnicas/Barnices/FTBARNIZPLUS2K.pdf",
       },
       {
         name: "BARNIZ EXPRESS",
-        pdf: "/fichastecnicas/Barnices/FT BARNIZ EXPRESS.pdf",
+        pdf: "/fichastecnicas/Barnices/FTBARNIZEXPRESS.pdf",
       },
     ],
     Catalizadores: [
       {
         name: "CATALIZADOR AUTOIMPRIMANTE",
-        pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
+        pdf: "/fichastecnicas/Auxiliares/FT CATALIZADOR AUTOIMPRIMANTE.pdf",
       },
       {
         name: "CATALIZADOR HS",
-        pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
+        pdf: "/fichastecnicas/Auxiliares/FT CATALIZADOR HS.pdf",
       },
       {
         name: "CATALIZADOR 410",
-        pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
+        pdf: "/fichastecnicas/Auxiliares/FT CATALIZADOR PUR 410.pdf",
       },
       {
         name: "CATALIZADOR 411",
-        pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
+        pdf: "/fichastecnicas/Auxiliares/FT CATALIZADOR PUR 411.pdf",
       },
       {
         name: "CATALIZADOR 412 ",
-        pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
+        pdf: "/fichastecnicas/Auxiliares/FT CATALIZADOR PUR 412.pdf",
       },
     ],
-    Diluyentes: [
+    Auxiliares: [
       {
         name: "DILUYENTE PUR ATL",
-        pdf: "/fichastecnicas/Diluyentesycomplementarios/FT DILUYENTE PUR ATL.pdf",
+        pdf: "/fichastecnicas/Auxiliares/FT DILUYENTE PUR ATL.pdf",
       },
       {
         name: "DESENGRASANTE B.S",
-        pdf: "/fichastecnicas/Diluyentesycomplementarios/FT DESENGRASANTE B.S.pdf",
+        pdf: "/fichastecnicas/Auxiliares/FT DESENGRASANTE B.S.pdf",
       },
       {
         name: "REMOVEDOR DE OXIDO",
-        pdf: "/fichastecnicas/Diluyentesycomplementarios/FT REMOVEDOR DE OXIDO.pdf",
+        pdf: "/fichastecnicas/Auxiliares/FT REMOVEDOR DE OXIDO.pdf",
       },
       {
         name: "SLN EPOXICA",
-        pdf: "/fichastecnicas/Diluyentesycomplementarios/FT SLN EPOXICA.pdf",
+        pdf: "/fichastecnicas/Auxiliares/FT SLN EPOXICA.pdf",
       },
       {
         name: "SOLUCIÓN POLIURETANICA",
-        pdf: "/fichastecnicas/Diluyentesycomplementarios/FT SOLUCIÓN POLIURETANICA.pdf",
+        pdf: "/fichastecnicas/Auxiliares/FT SOLUCIÓN POLIURETANICA.pdf",
       },
     ],
-    EntonadoresPS: [
+    "Entonadores PS": [
       {
         name: "Entonador PS",
         pdf: "/fichastecnicas/Entonadoresps/FT ENTONADORES PS.pdf",
       },
     ],
-    EntonadoresPUR: [
+    "Entonadores y esmaltes PUR": [
       {
-        name: "Entonador PUR 1",
-        pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
+        name: "Entonador y esmaltes pur",
+        pdf: "/fichastecnicas/Entonadoresyesmaltespur/FT ENTONADORES Y ESMALTES PUR.pdf",
       },
       {
-        name: "Entonador PUR 1",
-        pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
+        name: "Esmaltes metalizados",
+        pdf: "/fichastecnicas/Entonadoresyesmaltespur/FT ESMALTES METALIZADOS PUR.pdf",
       },
     ],
     Fondos: [
       {
-        name: "Fondo 1",
-        pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
+        name: "Bumper express negro",
+        pdf: "/fichastecnicas/Fondos/FT BUMPER EXPRESS NEGRO.pdf",
       },
       {
-        name: "Fondo 1",
-        pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
+        name: "Fondos monocomponentes",
+        pdf: "/fichastecnicas/Fondos/FT FONDO MONOCOMPONENTE.pdf",
+      },
+      {
+        name: "Fondos 2K",
+        pdf: "/fichastecnicas/Fondos/FT FONDOS 2K.pdf",
       },
     ],
     Masilla: [
       {
-        name: "Masilla 1",
-        pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
+        name: "Masilla",
+        pdf: "/fichastecnicas/Masilla/FT MASILLA.pdf",
       },
     ],
-    Mates: [
+    "Mates y semimates": [
       {
-        name: "Mate 1",
-        pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
+        name: "Esmalte mates y semimates",
+        pdf: "/fichastecnicas/Matesysemimates/FT ESMALTES MATES Y SEMIMATES.pdf",
+      },
+      {
+        name: "Pasta mateante",
+        pdf: "/fichastecnicas/Matesysemimates/FT PASTA MATEANTE.pdf",
+      },
+    ],
+    Poliuretano: [
+      {
+        name: "Poliuretano DTM",
+        pdf: "/fichastecnicas/DTM/FT POLIURETANOS DTM.pdf",
       },
     ],
   };
 
   const industria = {
-    AnticorrosivosEP: [
+    "Anticorrosivos EP": [
       {
         name: "EPOXICO ANTICORROSIVOS",
-        pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT EPOXICO ANTICORROSIVOS.pdf",
+        pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT EPOXICO ANTICORROSIVOS .pdf",
       },
       {
         name: "WASH PRIMER",
@@ -124,10 +138,10 @@ const FichasTecnicas = () => {
         pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
       },
     ],
-    EsmaltesEP: [
+    "Esmaltes EP": [
       {
         name: "Esmalte EP 1",
-        pdf: "/fichastecnicas/AnticorrosivosEpoxicos/FT AUTOIMPRIMANTE GRIS.pdf",
+        pdf: "/fichastecnicas/Esmaltesepoxicos/FT EPOXICO.pdf",
       },
     ],
   };
@@ -141,7 +155,7 @@ const FichasTecnicas = () => {
   return (
     <>
       <Header />
-      <picture className="contenedor-imagenes-principales-fichas-tecnicas">
+      <picture className="contenedor-imagen-productos">
         <source
           srcSet={imageFichasTecnicasDesktop}
           media="(min-width: 768px)"
