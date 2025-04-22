@@ -140,7 +140,7 @@ const FichasTecnicas = () => {
     ],
     "Esmaltes EP": [
       {
-        name: "Esmalte EP 1",
+        name: "Esmalte EP ",
         pdf: "/fichastecnicas/Esmaltesepoxicos/FT EPOXICO.pdf",
       },
     ],

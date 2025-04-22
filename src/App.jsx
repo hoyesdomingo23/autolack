@@ -21,6 +21,8 @@ import Monocomponentes from "./components/lineas/monocomponentes/Monocomponentes
 import ProductoMonocomponentes from "./components/lineas/monocomponentes/ProductoMonocomponentes";
 import Contactos from "./components/contacto/Contactos";
 import LandingNuevo from "./components/Nuevo/LandingNuevo";
+import Iniciosesion from "./components/sesion/Iniciosesion";
+import Colores from "./components/sesion/colores/Colores";
 
 function App() {
   return (
@@ -34,6 +36,9 @@ function App() {
           <Route path="/contacto" element={<Contactos />} />
           <Route path="/nuevo" element={<LandingNuevo />} />
           <Route path="/fichas-tecnicas" element={<FichasTecnicas />} />
+          <Route path="/inicio-sesion" element={<Iniciosesion />} />
+          <Route path="/colores" element={<Colores />} />
+
           {/* Lineas/Categorias */}
           <Route path="/Poliuretano" element={<Poliuretano />} />
           <Route path="/Industria" element={<Industria />} />
