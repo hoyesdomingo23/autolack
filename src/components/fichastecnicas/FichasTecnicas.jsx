@@ -27,6 +27,10 @@ const FichasTecnicas = () => {
     ],
     Catalizadores: [
       {
+        name: "DILUYENTE PUR ATL",
+        pdf: "/fichastecnicas/Auxiliares/FT ENDURECEDOR POLIURETANO.pdf",
+      },
+      {
         name: "CATALIZADOR AUTOIMPRIMANTE",
         pdf: "/fichastecnicas/Auxiliares/FT CATALIZADOR AUTOIMPRIMANTE.pdf",
       },

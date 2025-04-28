@@ -2,12 +2,13 @@ import React from "react";
 import "./Contactos.css";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import bannerContactenos from "../images/imagenPrueba-contacto.jpg";
-import imagenOficcina from "../images/Meyn-NL.jpg";
+import bannerContactenos from "../images/contacto.png";
+import imagenOficcina from "../images/contacto_1000x600.png";
 import imagenPrimerVendedor from "../images/Santiago.jpg";
 import imagenTercerVendedor from "../images/JohnMarioTorresAlmanza.jpg";
 import imagenSegundoVendedor from "../images/HugoVargasBeltran.jpg";
 import imagencuartoVendedor from "../images/Pinescol.png";
+import imagenDesconocidoPinturasCs from "../images/imagen-temporal-desconocido.jpg";
 
 const Contactos = () => {
   return (
@@ -99,7 +100,7 @@ const Contactos = () => {
           </a>
         </div>
         <div className="card">
-          <img src={imagenPrimerVendedor} className="image" />
+          <img src={imagenDesconocidoPinturasCs} className="image" />
 
           <div className="card-info">
             <span>PINTURAS CA</span>

@@ -12,7 +12,7 @@ const Colores = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email === "mateo123@gmail.com" && password === "matero123") {
-      navigate("/nuevo");
+      navigate("/InicioColores");
     } else {
       alert("Lo sentimos, usuario o contraseña incorrectas");
     }

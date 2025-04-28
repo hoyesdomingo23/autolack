@@ -2,18 +2,22 @@ import React, { useState } from "react";
 import "./LandingNuevo.css";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import ImagenNuevosPrimero from "../images/Lanzamientos800x1000.png";
+import ImagenNuevosPrimero from "../images/Perlaazul.png";
+import ImagenNuevosDos from "../images/Perlacobre.png";
+import ImagenNuevosTres from "../images/Perlablanca.png";
+import ImagenNuevosCuarto from "../images/Perlaroja.png";
+import ImagenNuevosQuinto from "../images/Perlaverde.png";
 import bannerNuevoDesktop from "../images/Nuevos-productos-1920x920.jpg";
 import bannerNuevoMobile from "../images/Nuevos-productos-1000x500.jpg";
 
 const LandingNuevo = () => {
   const [index, setIndex] = useState(0); // Estado para manejar el índice de los productos
   const products = [
-    { id: "23432252", title: "Producto uno", image: ImagenNuevosPrimero },
-    { id: "23432253", title: "Producto dos", image: ImagenNuevosPrimero },
-    { id: "23432254", title: "Producto tres", image: ImagenNuevosPrimero },
-    { id: "23432255", title: "Producto cuatro", image: ImagenNuevosPrimero },
-    { id: "23432256", title: "Producto cinco", image: ImagenNuevosPrimero },
+    { title: "Perla azul", image: ImagenNuevosPrimero },
+    { title: "Perla cobre", image: ImagenNuevosDos },
+    { title: "Perla blanca", image: ImagenNuevosTres },
+    { title: "Perla roja", image: ImagenNuevosCuarto },
+    { title: "Perla verde", image: ImagenNuevosQuinto },
   ];
 
   // Funciones para navegar
@@ -55,7 +59,6 @@ const LandingNuevo = () => {
                 <div className="product-header">
                   <div className="product-details">
                     <span className="product-title">{product.title}</span>
-                    <p className="product-id">ID: {product.id}</p>
                   </div>
                 </div>
                 <button className="product-button">Ver más</button>
@@ -68,7 +71,7 @@ const LandingNuevo = () => {
         </button>
       </div>
       <div className="h2-nuevos-productos">
-        <h2>Descubre nuestros nuevos colores!</h2>
+        <h2>Descubre nuestros proximos colores!</h2>
       </div>
       <section className="contenedor-colores-temporada">
         <div className="cards-nuevos">
@@ -107,8 +110,9 @@ const LandingNuevo = () => {
                   </svg>
                 </div>
               </div>
-              <div className="nome">0E3746</div>
+              <div className="nome">#800000</div>
             </div>
+
             <div className="cores cor2">
               <div className="div3"></div>
               <div className="div4">
@@ -126,7 +130,7 @@ const LandingNuevo = () => {
                   </svg>
                 </div>
               </div>
-              <div className="nome">EAE8DC</div>
+              <div className="nome">#007241</div>
             </div>
             <div className="cores cor3">
               <div className="div5"></div>
@@ -145,7 +149,7 @@ const LandingNuevo = () => {
                   </svg>
                 </div>
               </div>
-              <div className="nome">F4F2EC</div>
+              <div className="nome">#e4e7e7 </div>
             </div>
             <div className="cores cor4">
               <div className="div7"></div>
@@ -164,7 +168,7 @@ const LandingNuevo = () => {
                   </svg>
                 </div>
               </div>
-              <div className="nome">BE2623</div>
+              <div className="nome">#324370</div>
             </div>
           </div>
         </div>

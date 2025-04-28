@@ -23,6 +23,7 @@ import Contactos from "./components/contacto/Contactos";
 import LandingNuevo from "./components/Nuevo/LandingNuevo";
 import Iniciosesion from "./components/sesion/Iniciosesion";
 import Colores from "./components/sesion/colores/Colores";
+import ComparacionColores from "./components/sesion/comparacion/ComparacionColores";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="/fichas-tecnicas" element={<FichasTecnicas />} />
           <Route path="/inicio-sesion" element={<Iniciosesion />} />
           <Route path="/colores" element={<Colores />} />
+          <Route path="/InicioColores" element={<ComparacionColores />} />
 
           {/* Lineas/Categorias */}
           <Route path="/Poliuretano" element={<Poliuretano />} />
