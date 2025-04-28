@@ -2,7 +2,7 @@ import React from "react";
 import "./Contactos.css";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import bannerContactenos from "../images/contacto.png";
+import bannerContactenos from "../images/Contacto.png";
 import imagenOficcina from "../images/contacto_1000x600.png";
 import imagenPrimerVendedor from "../images/Santiago.jpg";
 import imagenTercerVendedor from "../images/JohnMarioTorresAlmanza.jpg";
