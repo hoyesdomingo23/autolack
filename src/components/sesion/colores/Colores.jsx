@@ -12,6 +12,11 @@ const Colores = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email === "mateo123@gmail.com" && password === "matero123") {
+      const expirationTime = new Date().getTime() + 24 * 60 * 60 * 1000; // 24 horas
+      localStorage.setItem(
+        "auth",
+        JSON.stringify({ loggedIn: true, expiration: expirationTime })
+      );
       navigate("/InicioColores");
     } else {
       alert("Lo sentimos, usuario o contraseña incorrectas");

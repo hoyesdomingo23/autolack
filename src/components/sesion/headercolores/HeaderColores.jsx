@@ -44,14 +44,14 @@ const HeaderColores = () => {
             <li className="estilos-para-item" onClick={handleHome}>
               INICIO
             </li>
-            <li className="estilos-para-item" onClick={handleSomos}>
-              ¿QUIÉNES SOMOS?
-            </li>
             <li
               className="estilos-para-item estilos-para-dropdown"
               onClick={handleLineas}
             >
-              LINEAS
+              COMPARAR
+            </li>{" "}
+            <li className="estilos-para-item" onClick={handleSomos}>
+              ¿QUIÉNES SOMOS?
             </li>
           </ul>
 
@@ -115,8 +115,8 @@ const HeaderColores = () => {
                   </a>
                 </li>
                 <li onClick={handleHome}>INICIO</li>
+                <li onClick={handleLineas}>COMPARAR</li>
                 <li onClick={handleSomos}>¿QUIÉNES SOMOS?</li>
-                <li onClick={handleLineas}>LINEAS</li>
               </ul>
             </div>
           </div>
