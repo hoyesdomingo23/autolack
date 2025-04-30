@@ -241,7 +241,7 @@ const Home = () => {
           alt="Banner Dos"
           onClick={() => {
             window.location.href =
-              "https://online.flippingbook.com/view/750686242/";
+              "https://www.canva.com/design/DAGkk2JtR5M/TzSCgKQAQh-npbTXrKKmhw/view?utm_content=DAGkk2JtR5M&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h559aea8d43";
           }}
           style={{ cursor: "pointer" }}
         />
