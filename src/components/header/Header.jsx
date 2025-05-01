@@ -158,10 +158,10 @@ const Header = () => {
                 <li onClick={handleHome}>INICIO</li>
                 <li onClick={handleSomos}>¿QUIÉNES SOMOS?</li>
                 <li onClick={handleLineas}>LINEAS</li>
-                <li onClick={handleNuevo}>LINEAS</li>
+                <li onClick={handleNuevo}>NUEVO</li>
                 <li onClick={handleFichasTecnicas}>FICHAS TÉCNICAS</li>
                 {/* <li>MISIÓN Y VISIÓN</li> */}
-                <li onClick={handleContacto}>Contacto</li>
+                <li onClick={handleContacto}>CONTACTO</li>
               </ul>
             </div>
           </div>

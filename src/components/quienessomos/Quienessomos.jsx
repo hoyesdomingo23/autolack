@@ -5,7 +5,7 @@ import "./Quienessomos.css";
 import bannerDesktopNosotros from "../images/Quienessomos1920x920.jpg";
 import bannerMobileNosotros from "../images/Quienessomos1000x500.jpg";
 import politicasCalidadNosotros from "../images/Misión.jpg";
-import misionNosotros from "../images/Políticas-de-calidad-miniatura.jpg";
+import misionNosotros from "../images/mision1.jpg";
 import visionNosotros from "../images/Visión.jpg";
 
 const Quienessomos = () => {

@@ -71,7 +71,7 @@ const LandingNuevo = () => {
         </button>
       </div>
       <div className="h2-nuevos-productos">
-        <h2>Descubre nuestros proximos colores!</h2>
+        <h2>!Descubre nuestros proximos colores!</h2>
       </div>
       <section className="contenedor-colores-temporada">
         <div className="cards-nuevos">
@@ -110,7 +110,7 @@ const LandingNuevo = () => {
                   </svg>
                 </div>
               </div>
-              <div className="nome">#800000</div>
+              <div className="nome">ENT PS Rojo Profundo</div>
             </div>
 
             <div className="cores cor2">
@@ -130,7 +130,7 @@ const LandingNuevo = () => {
                   </svg>
                 </div>
               </div>
-              <div className="nome">#007241</div>
+              <div className="nome">ENT PS Verde Amarilloso</div>
             </div>
             <div className="cores cor3">
               <div className="div5"></div>
@@ -149,7 +149,7 @@ const LandingNuevo = () => {
                   </svg>
                 </div>
               </div>
-              <div className="nome">#e4e7e7 </div>
+              <div className="nome">ENT PS Blanco Micronizado </div>
             </div>
             <div className="cores cor4">
               <div className="div7"></div>
@@ -168,7 +168,7 @@ const LandingNuevo = () => {
                   </svg>
                 </div>
               </div>
-              <div className="nome">#324370</div>
+              <div className="nome">ENT PS Azul Rojizo</div>
             </div>
           </div>
         </div>

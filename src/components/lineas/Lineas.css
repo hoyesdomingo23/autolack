@@ -210,12 +210,11 @@
 }
 .container-complet-sale-landing-page-first {
   display: flex;
-  justify-content: center;
-  /* gap: 5px; */
-  overflow-x: auto;
-  white-space: nowrap;
-  margin: 20px;
-  overflow-x: hidden;
+  flex-wrap: nowrap; /* Importante si quieres scroll horizontal /
+  overflow-x: auto;   / Para permitir desplazamiento horizontal /
+  gap: 16px;          / Espacio uniforme entre imágenes */
+  padding: 0 16px;
+  margin-bottom: 20PX;
 }
 
 .container-image-text-sale-landing {
