@@ -7,7 +7,7 @@
   margin-top: 3%;
 }
 
-.inputs-circulocromatico {
+/* .inputs-circulocromatico {
   margin-bottom: 20px;
   gap: 23px;
 }
@@ -25,7 +25,7 @@
   transition: 300ms ease-in-out;
   position: relative;
   margin-top: 10px;
-}
+} */
 
 .resultado-colores {
   display: flex;
@@ -131,4 +131,529 @@
 
 .contenedor-respuesta-mas-circulo {
   display: flex;
+}
+
+/*Nuevo css*/
+
+/* Botón para abrir el menú */
+#menuButton {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 2001;
+  font-size: 24px;
+  background-color: #34495e;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #2c3e50;
+  color: white;
+  padding-top: 80px;
+  transition: left 0.3s ease;
+  z-index: 2000;
+  overflow-y: auto;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  padding: 20px 0;
+  transition: background 0.2s ease;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: block;
+}
+
+.sidebar ul li:hover {
+  background-color: #34495e;
+}
+
+.botones-mostrar-comparar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 100px;
+}
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin: 50px auto;
+  border: 1px solid #000;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+}
+
+/* Responsive para tablets */
+@media screen and (max-width: 768px) {
+  .main-content {
+    width: 95%;
+    padding: 15px;
+  }
+}
+
+/* Responsive para móviles */
+@media screen and (max-width: 480px) {
+  .main-content {
+    width: 100%;
+    padding: 10px;
+  }
+}
+/* Títulos */
+.main-content h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+/* Estilos de los inputs*/
+
+.inputs-comparar-colores {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+.wave-group {
+  position: relative;
+}
+
+.wave-group .input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+}
+
+.wave-group .input:focus {
+  outline: none;
+}
+
+.wave-group .label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  display: flex;
+}
+
+.wave-group .label-char {
+  transition: 0.2s ease all;
+  transition-delay: calc(var(--index) * 0.05s);
+}
+
+.wave-group .input:focus ~ label .label-char,
+.wave-group .input:valid ~ label .label-char {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #5264ae;
+}
+
+.wave-group .bar {
+  position: relative;
+  display: block;
+  width: 200px;
+}
+
+.wave-group .bar:before,
+.wave-group .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264ae;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.wave-group .bar:before {
+  left: 50%;
+}
+
+.wave-group .bar:after {
+  right: 50%;
+}
+
+.wave-group .input:focus ~ .bar:before,
+.wave-group .input:focus ~ .bar:after {
+  width: 50%;
+}
+.contenedor-colores h3 {
+  margin-bottom: 5px;
+}
+
+#chartsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+canvas {
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+#cupdateButton:hover {
+  background-color: darkblue;
+}
+
+/* Contenedor de los gráficos en fila */
+#chartsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  padding-left: 60px;
+}
+
+/* Estilo de los canvas */
+canvas {
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+/* Tamaño específico para cada gráfico */
+#LChart {
+  width: 450px !important;
+  height: 450px !important;
+}
+
+#ABChart {
+  width: 450px;
+  height: 450px;
+}
+
+#colorMuestraContainer {
+  margin-top: 20px !important;
+  width: 400px !important;
+  height: 100px;
+  margin: 0 auto;
+}
+
+#colorMuestra {
+  width: 173px !important;
+  height: 50px !important;
+  margin: 0 auto;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+.boton-continuar {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.boton-continuar {
+  --primary-color: #111;
+  --hovered-color: #125099;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.boton-continuar p {
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.boton-continuar::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.boton-continuar p::before {
+  position: absolute;
+  /*   box-sizing: border-box; */
+  content: "Comparar";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+.boton-continuar:hover::after {
+  width: 100%;
+}
+
+.boton-continuar:hover p::before {
+  width: 100%;
+}
+
+.boton-continuar:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color);
+}
+
+.boton-continuar svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
+
+/*Boton mostrar*/
+
+.boton-mostrar {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.boton-mostrar {
+  --primary-color: #111;
+  --hovered-color: #125099;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.boton-mostrar p {
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.boton-mostrar::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.boton-mostrar p::before {
+  position: absolute;
+  /*   box-sizing: border-box; */
+  content: "Mostrar";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+.boton-mostrar:hover::after {
+  width: 100%;
+}
+
+.boton-mostrar:hover p::before {
+  width: 100%;
+}
+
+.boton-mostrar:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color);
+}
+
+.boton-mostrar svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
+
+/*Boton comparar*/
+
+.boton-comparar {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.boton-comparar {
+  --primary-color: #111;
+  --hovered-color: #125099;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.boton-comparar p {
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.boton-comparar::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.boton-comparar p::before {
+  position: absolute;
+  /*   box-sizing: border-box; */
+  content: "Comparar";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+.boton-comparar:hover::after {
+  width: 100%;
+}
+
+.boton-comparar:hover p::before {
+  width: 100%;
+}
+
+.boton-comparar:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color);
+}
+
+.boton-comparar svg {
+  color: var(--primary-color);
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
+
+.contenedor-botones-ver-comparar {
+  display: flex;
+  gap: 100px;
+}
+/*popup*/
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Contenedor del popup */
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de logearme */
+.popup-content button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.imagen-rueda {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rueda-color {
+  width: 300px;
+  height: 300px;
+}
+
+.punto-blanco {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contenedor-colores {
+  display: flex;
+  gap: 100px;
+}
+
+.contenedor-colot-obtenido {
+  margin-top: 20px;
 }

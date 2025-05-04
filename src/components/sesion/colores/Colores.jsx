@@ -11,7 +11,7 @@ const Colores = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email === "mateo123@gmail.com" && password === "matero123") {
+    if (email === "calidad@autolack.com.co" && password === "cualquiera8090") {
       const expirationTime = new Date().getTime() + 24 * 60 * 60 * 1000; // 24 horas
       localStorage.setItem(
         "auth",

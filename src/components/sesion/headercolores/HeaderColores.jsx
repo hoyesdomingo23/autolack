@@ -13,27 +13,15 @@ const HeaderColores = () => {
     setIsOpen(false);
   };
   const navigate = useNavigate();
-  const handleHome = () => {
-    navigate("/");
-  };
-  const handleSomos = () => {
-    navigate("/nosotros");
-  };
-  const handleLineas = () => {
-    navigate("/lineas");
-  };
-  const handleFichasTecnicas = () => {
-    navigate("/fichas-tecnicas");
-  };
 
-  const handleContacto = () => {
-    navigate("/contacto");
+  const handleInicioColores = () => {
+    navigate("/InicioColores");
   };
-  const handleNuevo = () => {
-    navigate("/nuevo");
+  const handleInicioSesion = () => {
+    navigate("/comparacion");
   };
-  const handleSesion = () => {
-    navigate("/inicio-sesion");
+  const handleAutoloack = () => {
+    navigate("/");
   };
   return (
     <>
@@ -41,16 +29,19 @@ const HeaderColores = () => {
         <nav className="estilos-para-nav">
           {/* Menú para desktop */}
           <ul className="estilos-para-lista estilos-para-desktop">
-            <li className="estilos-para-item" onClick={handleHome}>
+            <li className="estilos-para-item" onClick={handleAutoloack}>
+              AUTOLACK
+            </li>
+            <li className="estilos-para-item" onClick={handleInicioColores}>
               INICIO
             </li>
             <li
               className="estilos-para-item estilos-para-dropdown"
-              onClick={handleLineas}
+              onClick={handleInicioSesion}
             >
               COMPARAR
             </li>{" "}
-            <li className="estilos-para-item" onClick={handleSomos}>
+            <li className="estilos-para-item" onClick={handleInicioSesion}>
               ¿QUIÉNES SOMOS?
             </li>
           </ul>
@@ -114,9 +105,10 @@ const HeaderColores = () => {
                     </svg>
                   </a>
                 </li>
-                <li onClick={handleHome}>INICIO</li>
-                <li onClick={handleLineas}>COMPARAR</li>
-                <li onClick={handleSomos}>¿QUIÉNES SOMOS?</li>
+                <li onClick={handleAutoloack}>AUTOLACK</li>
+                <li onClick={handleInicioColores}>INICIO</li>
+                <li onClick={handleInicioSesion}>COMPARAR</li>
+                <li onClick={handleInicioSesion}>¿QUIÉNES SOMOS?</li>
               </ul>
             </div>
           </div>

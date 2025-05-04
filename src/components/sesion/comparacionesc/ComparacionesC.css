@@ -1,0 +1,153 @@
+.comparaciones-container {
+  margin-top: 50px;
+}
+.comparaciones-container h2 {
+  color: #125099;
+  margin-bottom: 50px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+#filaMuestra {
+  background-color: white;
+}
+
+tr:nth-child(2) {
+  background-color: #007bff; /* AU */
+  color: white;
+}
+
+tr:nth-child(3) {
+  background-color: #28a745; /* CR */
+  color: white;
+}
+
+tr:nth-child(4) {
+  background-color: #ffc107; /* GR */
+  color: black;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.graficos-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+canvas {
+  border: 1px solid #ccc;
+}
+
+.colores {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.color-box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+}
+
+.color-label {
+  text-align: center;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1px;
+  gap: 20px;
+}
+
+.contenedor-rueda-grafica {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 50px; /* Ajuste dinámico */
+  flex-wrap: wrap; /* Permite que los elementos se acomoden mejor en pantallas pequeñas */
+}
+
+.grafica-luminosidad {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+}
+
+.imagen-rueda img {
+  width: 100%;
+  max-width: 400px; /* Ajuste para mantener proporción */
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .contenedor-rueda-grafica {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* From Uiverse.io by Creatlydev */
+.boton-descargar-excel {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.75em 1em;
+  padding-right: 1.25em;
+  color: #fff;
+  border: 1px solid transparent;
+  font-weight: 700;
+  border-radius: 2em;
+  font-size: 1rem;
+  box-shadow: 0 0.7em 1.5em -0.5em hsla(249, 62%, 51%, 0.745);
+  transition: transform 0.3s;
+
+  background: linear-gradient(
+    90deg,
+    rgba(77, 54, 208, 1) 0%,
+    rgba(132, 116, 254, 1) 100%
+  );
+}
+
+.button__icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.boton-descargar-excel:hover {
+  border-color: #f4f5f2;
+}
+
+.boton-descargar-excel:active {
+  transform: scale(0.98);
+  box-shadow: 0 0.5em 1.5em -0.5em hsla(249, 62%, 51%, 0.745);
+}

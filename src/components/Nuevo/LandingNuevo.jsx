@@ -92,9 +92,6 @@ const LandingNuevo = () => {
               </div>
             </div>
             <div className="cores cor1">
-              <div className="div1">
-                <span className="func">Click me!</span>
-              </div>
               <div className="div2">
                 <div className="component">
                   <svg

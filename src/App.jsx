@@ -2,12 +2,15 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 
+// Landings principales
 import Home from "./components/home/Home";
 import Quienessomos from "./components/quienessomos/Quienessomos";
 import Lineas from "./components/lineas/Lineas";
 import Producto from "./components/lineas/Producto";
 import FichasTecnicas from "./components/fichastecnicas/FichasTecnicas";
 import ProductoPoliuretano from "./components/lineas/poliuretano/ProductoPoliuretano";
+
+// Landings productos
 import Poliuretano from "./components/lineas/poliuretano/Poliuretano";
 import Industria from "./components/lineas/industria/Industria";
 import ProductoIndustria from "./components/lineas/industria/ProductoIndustria";
@@ -19,11 +22,14 @@ import Poliester from "./components/lineas/poliester/Poliester";
 import ProductoPoliester from "./components/lineas/poliester/ProductoPoliester";
 import Monocomponentes from "./components/lineas/monocomponentes/Monocomponentes";
 import ProductoMonocomponentes from "./components/lineas/monocomponentes/ProductoMonocomponentes";
+
+// Landings informacion y colores
 import Contactos from "./components/contacto/Contactos";
 import LandingNuevo from "./components/Nuevo/LandingNuevo";
 import Iniciosesion from "./components/sesion/Iniciosesion";
 import Colores from "./components/sesion/colores/Colores";
 import ComparacionColores from "./components/sesion/comparacion/ComparacionColores";
+import ComparacionesC from "./components/sesion/comparacionesc/ComparacionesC";
 
 function App() {
   return (
@@ -40,6 +46,7 @@ function App() {
           <Route path="/inicio-sesion" element={<Iniciosesion />} />
           <Route path="/colores" element={<Colores />} />
           <Route path="/InicioColores" element={<ComparacionColores />} />
+          <Route path="/comparacion" element={<ComparacionesC />} />
 
           {/* Lineas/Categorias */}
           <Route path="/Poliuretano" element={<Poliuretano />} />
