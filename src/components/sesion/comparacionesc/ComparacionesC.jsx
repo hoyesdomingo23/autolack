@@ -46,7 +46,7 @@ const ComparacionesC = () => {
       window.myChart = new Chart(ctx, {
         type: "bar",
         data: {
-          labels: ["Muestra", "AUTOLACK", "GR", "CR"],
+          labels: ["Muestra", "AUTOLACK"],
           datasets: [
             {
               label: "ΔL Valores",
@@ -184,8 +184,8 @@ const ComparacionesC = () => {
       B: data.B,
       C: Math.sqrt(Math.pow(data.A, 2) + Math.pow(data.B, 2)),
       colorMasCercanoAups: buscarEnBaseDatos(aups),
-      colorMasCercanoCrps: buscarEnBaseDatos(crps),
-      colorMasCercanoGrps: buscarEnBaseDatos(grps),
+      // colorMasCercanoCrps: buscarEnBaseDatos(crps),
+      // colorMasCercanoGrps: buscarEnBaseDatos(grps),
     };
   };
 
@@ -238,7 +238,7 @@ const ComparacionesC = () => {
               </td>
               <td>{colorComparacion?.colorMasCercanoAups?.Name}</td>
             </tr>
-            <tr>
+            {/* <tr>
               <td>CR</td>
               <td>{colorComparacion?.colorMasCercanoCrps?.L}</td>
               <td>{colorComparacion?.colorMasCercanoCrps?.A}</td>
@@ -269,7 +269,7 @@ const ComparacionesC = () => {
                 {colorComparacion?.colorMasCercanoGrps?.deltaE.toFixed(2)}
               </td>
               <td>{colorComparacion?.colorMasCercanoGrps?.Name}</td>
-            </tr>
+            </tr> */}
           </tbody>
         </table>
         <div className="btn-container">
@@ -314,7 +314,28 @@ const ComparacionesC = () => {
           </div>
           <div className="imagen-rueda">
             <h3>Cromatocidad</h3>
-            <img src="/Rueda.png" alt="Rueda de colores" />
+            <div className="contenedor-imagen">
+              <img src="/Rueda.png" alt="Rueda de colores" />
+              {/* Punto de muestra (blanco) */}
+              <div
+                className="punto-color punto-muestra"
+                style={{
+                  backgroundColor: "white",
+                  left: `${colorComparacion?.A * 2}px`,
+                  top: `${colorComparacion?.B * 2}px`,
+                }}
+              ></div>
+
+              {/* Punto de Autolack (azul) */}
+              <div
+                className="punto-color punto-autolack"
+                style={{
+                  backgroundColor: "blue",
+                  left: `${colorComparacion?.colorMasCercanoAups?.A * 2}px`,
+                  top: `${colorComparacion?.colorMasCercanoAups?.B * 2}px`,
+                }}
+              ></div>
+            </div>
           </div>
         </section>
       </div>

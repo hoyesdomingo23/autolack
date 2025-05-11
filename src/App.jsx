@@ -30,6 +30,7 @@ import Iniciosesion from "./components/sesion/Iniciosesion";
 import Colores from "./components/sesion/colores/Colores";
 import ComparacionColores from "./components/sesion/comparacion/ComparacionColores";
 import ComparacionesC from "./components/sesion/comparacionesc/ComparacionesC";
+import LecturaColores from "./components/sesion/lecturacolores/LecturaColores";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path="/colores" element={<Colores />} />
           <Route path="/InicioColores" element={<ComparacionColores />} />
           <Route path="/comparacion" element={<ComparacionesC />} />
+          <Route path="/lectura-color" element={<LecturaColores />} />
 
           {/* Lineas/Categorias */}
           <Route path="/Poliuretano" element={<Poliuretano />} />

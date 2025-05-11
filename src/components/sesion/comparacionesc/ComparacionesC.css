@@ -151,3 +151,22 @@ canvas {
   transform: scale(0.98);
   box-shadow: 0 0.5em 1.5em -0.5em hsla(249, 62%, 51%, 0.745);
 }
+
+.contenedor-imagen {
+  position: relative;
+}
+
+.punto-color {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.punto-muestra {
+  border: 2px solid black;
+}
+
+.punto-autolack {
+  border: 2px solid white;
+}
