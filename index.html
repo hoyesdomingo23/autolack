@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrias Autolack SAS | Expertos en Pintura</title>
+    <link rel="icon" type="image/png" href="imagenes/icono.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div id="promoModal" class="modal-overlay">
+    <div class="modal-content">
+        <span class="close-modal" id="closeModal">&times;</span>
+        
+        <div class="modal-slider">
+            <div class="slide-flyer active">
+                    <img src="imaginf/WhatsApp Image 2026-04-13 at 12.21.56 PM.jpeg" alt="Promo 1">
+                </a>
+            </div>
+            <div class="slide-flyer hidden-slide">
+                <a href="muestrario/muestrario.html">
+                    <img src="imagenes/flyer2.jpg" alt="Promo 2">
+                </a>
+            </div>
+            <div class="slide-flyer hidden-slide">
+                <a href="contacto/index.html">
+                    <img src="imagenes/flyer3.jpg" alt="Promo 3">
+                </a>
+            </div>
+
+            <button class="modal-nav prev" id="modalPrev">&#10094;</button>
+            <button class="modal-nav next" id="modalNext">&#10095;</button>
+        </div>
+        
+        <div class="modal-dots">
+            <span class="dot active"></span>
+            <span class="dot hidden-slide"></span>
+            <span class="dot hidden-slide"></span>
+        </div>
+    </div>
+</div>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-col logo-col">
+                <img src="imagenes/logo.png" alt="Autolack Logo" class="logo-small">
+            </div>
+
+            <div class="nav-col menu-col">
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="nosotros/nosotros.html">Nosotros</a></li>
+                    <li><a href="productos/productos.html">Productos</a></li>
+                    <li><a href="muestrario/muestrario.html">Colores</a></li>
+                    <li><a href="#lanzamientos">Lanzamientos</a></li>
+                    <li><a href="contacto/index.html">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-col user-col">
+                <a href="https://p3plzcpnl506301.prod.phx3.secureserver.net:2096/" target="_blank" class="user-icon">
+                    <i class="fa-regular fa-circle-user"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="videos/Autolack.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay">
+            <h1>Industrias Autolack SAS</h1>
+            <p>Excelencia en recubrimientos automotrices e industriales</p>
+        </div>
+    </section>
+
+    <section class="intro-section" id="nosotros">
+        <div class="container-flex">
+            <div class="intro-text">
+                <h2>Sobre Nosotros</h2>
+                <p>En Industrias Autolack sas desde nuestra creación en 2013, nos hemos consolidado como una empresa confiable y destacada en el ámbito del repintado automotriz e industrial. Nos caracterizamos por ofrecer soluciones de pintura de altísima calidad a precios accesibles, asegurando que cada cliente obtenga resultados excepcionales sin comprometer su presupuesto. En Industrias Autolack sas, contamos con un equipo con amplia experiencia y compromiso, garantizando que cada proyecto refleje precisión, durabilidad y estética impecable. Nuestra pasión por la excelencia y el servicio al cliente nos impulsa a seguir creciendo y desarrollando productos que respalden la elegancia y funcionalidad de los acabados automotrices e industriales. Confíe en nosotros, y descubra cómo transformamos cualquier vehículo o proyecto industrial con calidad y dedicación.</p>
+            </div>
+            <div class="intro-carousel">
+                <div class="carousel-track" id="track-intro">
+                    <img src="imagenes/planta.png" class="slide-intro active">
+                    <img src="imagenes/keyder.png" class="slide-intro">
+                    <img src="imagenes/john.png" class="slide-intro">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="specialties-section" id="especialidades">
+        <h2 class="section-title">Nuestras Líneas</h2>
+        <div class="specialties-row">
+            
+            <a href="productos/catalogo.html?linea=poliuretano" class="spec-card">
+                <img src="imagenes/sispur.png" alt="Poliuretano">
+                <div class="spec-info"><h3>Poliuretano</h3></div>
+            </a>
+
+            <a href="productos/catalogo.html?linea=poliester" class="spec-card">
+                <img src="imagenes/sisps.png" alt="Poliéster">
+                <div class="spec-info"><h3>Poliéster</h3></div>
+            </a>
+
+            <a href="productos/catalogo.html?linea=monocomponente" class="spec-card">
+                <img src="imagenes/sismon.png" alt="Monocomponente">
+                <div class="spec-info"><h3>Monocomponente</h3></div>
+            </a>
+
+            <a href="productos/catalogo.html?linea=madera" class="spec-card">
+                <img src="imagenes/sisma.png" alt="Madera">
+                <div class="spec-info"><h3>Madera</h3></div>
+            </a>
+
+            <a href="productos/catalogo.html?linea=epoxico" class="spec-card">
+                <img src="imagenes/sisind.png" alt="Epóxico">
+                <div class="spec-info"><h3>Epóxico</h3></div>
+            </a>
+
+            <a href="productos/catalogo.html?linea=auxiliares" class="spec-card">
+                <img src="imagenes/siscomp.png" alt="Complementarios">
+                <div class="spec-info"><h3>Auxiliares</h3></div>
+            </a>
+
+        </div>
+    </section>
+
+    <section class="launches-section" id="lanzamientos">
+        <h2 class="section-title">Nuevos Lanzamientos</h2>
+
+        <div class="launches-container">
+            <div class="launches-left">
+                <div class="launches-carousel">
+                    <button class="carousel-control prev-btn" id="prevLaunch" aria-label="Anterior">❮</button>
+
+                    <div class="launches-track-container">
+                        <div class="launches-track" id="launchTrack">
+                            
+                            <a href="nuevos/producto.html?id=lanzamiento-1" class="launch-card">
+                                <div class="launch-img-wrapper">
+                                    <img src="imagenes/lan1.png" alt="Barniz Ultra-Brillo">
+                                </div>
+                                <h3>Barniz HS - Nueva imagen</h3>
+                                <p>Nueva tecnología de secado rápido y brillo espejo.</p>
+                            </a>
+
+                            <a href="nuevos/producto.html?id=lanzamiento-2" class="launch-card">
+                                <div class="launch-img-wrapper">
+                                    <img src="imagenes/lan2.png" alt="Primer Epóxico">
+                                </div>
+                                <h3>ENT PS Rojo Extrarojo</h3>
+                                <p>La pureza del color en su estado más intenso</p>
+                            </a>
+
+                            <a href="nuevos/producto.html?id=lanzamiento-3" class="launch-card oculto" >
+                                <div class="launch-img-wrapper">
+                                    <img src="assets/prod3.jpg" alt="Poliéster Premium">
+                                </div>
+                                <h3>Poliéster Premium</h3>
+                                <p>Pigmentación de alta cobertura y estabilidad.</p>
+                            </a>
+
+                            <a href="nuevos/producto.html?id=lanzamiento-4" class="launch-card oculto">
+                                <div class="launch-img-wrapper">
+                                    <img src="assets/prod4.jpg" alt="Producto 4">
+                                </div>
+                                <h3>Complementario Nuevo</h3>
+                                <p>Descripción breve del producto nuevo aquí.</p>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <button class="carousel-control next-btn" id="nextLaunch" aria-label="Siguiente">❯</button>
+                </div>
+            </div>
+
+            <div class="launches-right">
+                <div class="impact-image-wrapper">
+                    <img src="imagenes/lanzamientos.jpg" alt="Resultado Final Autolack - Exhibición">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            
+            <div class="f-info">
+                <h3>Contacto</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Calle 77a sur #45-93 Sabaneta, Antioquia</p>
+                <p><i class="fa-solid fa-phone"></i> +57 (604) 4446457</p>
+                <p><i class="fa-solid fa-envelope"></i> info@autolack.com.co</p>
+            </div>
+
+            <div class="f-social">
+                <h3>Síguenos</h3>
+                <a href="https://www.instagram.com/industriasautolack" target="_blank" class="instagram-btn-perfil">
+                    <i class="fa-brands fa-instagram"></i> Visita nuestro perfil
+                </a>
+
+                <div class="instagram-widget-container">
+                    <script src="https://elfsightcdn.com/platform.js" async></script>
+                    <div class="elfsight-app-fabf3452-cf59-4c25-9e1c-884a80a6fad6" data-elfsight-app-lazy></div>
+                </div>
+            </div>
+
+            <div class="f-map">
+                <h3>Ubicación</h3>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521235123049!2d-75.60519652414777!3d6.194738526848419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e468307604f378d%3A0x1c5bef457e230160!2sINDUSTRIAS%20AUTOLACK%20SAS!5e0!3m2!1ses!2sco!4v1712530000000!5m2!1ses!2sco" 
+                        width="100%" 
+                        height="180" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copy">
+            <p>
+                © 2026 <strong>Industrias Autolack SAS</strong> | Todos los derechos reservados. <br>
+                <a href="politica_datos.pdf" class="link-politicas">Política de Tratamiento de Datos Personales</a>
+            </p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/573244171853" target="_blank" class="whatsapp-float" aria-label="Chatea con nosotros en WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+/* ==========================================================================
+   ESTILOS DE PÁGINA DE DETALLE DE PRODUCTO (RAYO DIAGONAL Y RASGADO)
+   ========================================================================== */
+
+/* 1. Layout Principal */
+.product-detail-page {
+    padding: 60px 5%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Aumentado a 1400px para dar más espacio a la imagen gigante */
+.product-detail-container { 
+    max-width: 1400px; 
+    width: 100%; 
+    margin: 0 auto; 
+}
+
+.product-detail-container .container-flex {
+    display: flex; 
+    align-items: center; 
+    gap: 60px; 
+    background: var(--blanco);
+    padding: 50px; 
+    border-radius: 20px; 
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05);
+}
+
+/* 2. Bloque de Imagen (PRIORIDAD ALTA) */
+.detail-img-box {
+    flex: 1.6; /* Antes era 1. Ahora la imagen ocupa mucho más espacio */
+    position: relative; 
+    background-color: #f1f1f1; 
+    border-radius: 15px;
+    padding: 10px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    border: 1px solid #ddd; 
+    overflow: hidden; 
+}
+
+.standard-img {
+    max-width: 100%; /* Aumentado al 100% para que llene el espacio */
+    height: auto; 
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+    transition: transform 0.5s ease;
+}
+
+.detail-img-box:hover .standard-img { 
+    transform: scale(1.05); 
+}
+
+/* Badge Flotante */
+.badge-new {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    background: var(--azul-rey);
+    color: white; 
+    padding: 8px 15px; 
+    font-size: 0.75rem; 
+    font-weight: 900;
+    text-transform: uppercase; 
+    border-radius: 5px; 
+    letter-spacing: 1px; 
+    z-index: 20;
+}
+
+/* ==========================================================================
+   ESTILO COMPARACIÓN: RAYO DIAGONAL Y EFECTO RASGADO
+   ========================================================================== */
+.comparison-container {
+    display: flex; 
+    width: 100%; 
+    height: 600px; /* Altura aumentada (antes 450px) para dar imponencia */
+    position: relative;
+    overflow: hidden; 
+    border-radius: 10px; 
+    background: #000; 
+    cursor: col-resize;
+}
+
+.comp-panel {
+    position: relative; 
+    flex: 1; 
+    transition: flex 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.comp-panel img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    transition: transform 0.8s ease;
+}
+
+/* --- EL RAYO DIVISOR (DIAGONAL Y RASGADO) --- */
+.comparison-container::before {
+    content: ''; position: absolute; top: -10%; left: 50%;
+    width: 15px; height: 120%; background: var(--azul-rey); z-index: 10;
+    transform: translateX(-50%) rotate(-5deg); 
+    clip-path: polygon(
+        0% 0%, 40% 10%, 10% 25%, 50% 35%, 5% 50%, 45% 65%, 0% 80%, 40% 95%, 0% 100%, 
+        100% 100%, 60% 90%, 95% 75%, 55% 60%, 98% 45%, 50% 30%, 90% 15%, 60% 0%
+    );
+    box-shadow: 0 0 25px var(--azul-rey);
+    transition: left 0.8s cubic-bezier(0.4, 0, 0.2, 1); pointer-events: none;
+}
+
+/* --- MARGEN DE LUZ --- */
+.comparison-container::after {
+    content: ''; position: absolute; top: -10%; left: 50%;
+    width: 25px; height: 120%; background: rgba(255, 255, 255, 0.4); z-index: 9;
+    transform: translateX(-50%) rotate(-5deg);
+    clip-path: polygon(
+        0% 0%, 40% 10%, 10% 25%, 50% 35%, 5% 50%, 45% 65%, 0% 80%, 40% 95%, 0% 100%, 
+        100% 100%, 60% 90%, 95% 75%, 55% 60%, 98% 45%, 50% 30%, 90% 15%, 60% 0%
+    );
+    transition: left 0.8s cubic-bezier(0.4, 0, 0.2, 1); pointer-events: none;
+}
+
+/* Etiquetas Antes / Después */
+.comp-label {
+    position: absolute; bottom: 25px; background: var(--azul-rey); color: white;
+    padding: 6px 18px; font-weight: 900; text-transform: uppercase; font-size: 0.7rem;
+    letter-spacing: 2px; z-index: 15; box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.panel-antes .comp-label { left: 20px; }
+.panel-despues .comp-label { right: 20px; }
+
+/* --- INTERACTIVIDAD HOVER --- */
+.comp-panel:hover { flex: 4; }
+
+.comparison-container:has(.panel-antes:hover)::before,
+.comparison-container:has(.panel-antes:hover)::after { left: 80%; }
+
+.comparison-container:has(.panel-despues:hover)::before,
+.comparison-container:has(.panel-despues:hover)::after { left: 20%; }
+
+.panel-despues:hover img { transform: scale(1.15); }
+
+/* ==========================================================================
+   4. BLOQUE DE INFORMACIÓN (SECUNDARIO)
+   ========================================================================== */
+.detail-info-content { 
+    flex: 1; /* Reducido de 1.2 a 1 para ceder espacio a la imagen */
+}
+
+#prod-title {
+    font-family: 'Barlow Semi Condensed', sans-serif; 
+    font-size: 3.5rem;
+    font-weight: 900; 
+    color: var(--negro); 
+    text-transform: uppercase; 
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.divider-blue { 
+    width: 100px; 
+    height: 7px; 
+    background-color: var(--azul-rey); 
+    margin-bottom: 30px; 
+}
+
+#prod-desc { 
+    font-size: 1.1rem; 
+    color: #444; 
+    line-height: 1.7; 
+    margin-bottom: 35px; 
+}
+
+#prod-specs-list { 
+    list-style: none; 
+    margin-bottom: 40px; 
+}
+
+#prod-specs-list li { 
+    font-size: 1.05rem; 
+    margin-bottom: 12px; 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    font-weight: 600; 
+}
+
+#prod-specs-list li i { color: var(--azul-rey); }
+
+.description-block h3, .specs-block h3 {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 1.1rem; 
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+    margin-bottom: 15px; 
+    color: var(--azul-rey); 
+    font-weight: 800;
+}
+
+/* ==========================================================================
+   5. BOTONES Y WHATSAPP
+   ========================================================================== */
+.cta-actions { 
+    border-top: 2px solid #eee; 
+    padding-top: 30px; 
+}
+
+.btn-cotizar {
+    display: inline-flex; 
+    align-items: center; 
+    gap: 12px; 
+    background-color: #25D366;
+    color: white; 
+    text-decoration: none; 
+    padding: 18px 35px; 
+    border-radius: 60px;
+    font-weight: 800; 
+    font-size: 1.1rem; 
+    transition: 0.3s ease; 
+    width: fit-content;
+}
+
+.btn-cotizar:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); 
+}
+
+.shipping-info { 
+    font-size: 0.9rem; 
+    color: #888; 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    font-weight: 600; 
+    margin-top: 20px;
+}
+
+.btn-back-home { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 700; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    transition: 0.3s;
+}
+
+.btn-back-home:hover { 
+    opacity: 0.7; 
+    transform: translateX(-5px); 
+}
+
+/* ==========================================================================
+   RESPONSIVO (MÓVIL Y TABLET)
+   ========================================================================== */
+@media (max-width: 1024px) {
+    /* Ajuste intermedio para tablets para que la imagen no aplaste el texto */
+    .product-detail-container .container-flex { gap: 40px; padding: 40px; }
+    .comparison-container { height: 500px; }
+}
+
+@media (max-width: 992px) {
+    .product-detail-container .container-flex { flex-direction: column; padding: 30px 15px; }
+    .detail-img-box { width: 100%; }
+    .comparison-container { height: 400px; width: 100%; }
+    .comparison-container::before, .comparison-container::after { transform: translateX(-50%) rotate(0deg); height: 100%; top: 0; }
+    #prod-title { font-size: 2.5rem; text-align: center; }
+    .divider-blue { margin: 0 auto 30px; }
+    .description-block h3, .specs-block h3 { text-align: center; }
+    .btn-cotizar { width: 100%; justify-content: center; }
+    .shipping-info { justify-content: center; }
+}

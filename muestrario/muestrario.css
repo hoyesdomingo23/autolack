@@ -1,0 +1,342 @@
+/* ==========================================================================
+   1. VARIABLES GLOBALES Y RESET
+   ========================================================================== */
+:root {
+    --azul-rey: #0041C2;
+    --blanco-gris: #F2F2F2;
+    --blanco: #FFFFFF;
+    --negro: #1A1A1A; /* Mantengo el negro base global */
+    --gris-oscuro: #1e1e1e;
+    --fuente-montserrat: 'Montserrat', sans-serif;
+    --fuente-industrial: 'Barlow Semi Condensed', sans-serif;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+html, body {
+    overflow-x: hidden; 
+    width: 100%;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+/* Base general de la plantilla */
+body { 
+    font-family: var(--fuente-montserrat); 
+    background-color: var(--blanco-gris); 
+}
+
+img, iframe, video {
+    max-width: 100% !important;
+}
+
+/* MODO OSCURO ESPECÍFICO PARA EL MUESTRARIO */
+.muestrario-page { 
+    background-color: #121212; /* Tu negro especial para esta página */
+    color: var(--blanco); 
+}
+
+/* ==========================================================================
+   2. HEADER Y MENÚ HAMBURGUESA (CON PROTECCIÓN MÓVIL)
+   ========================================================================== */
+.main-header {
+    background-color: var(--azul-rey);
+    padding: 10px 5%;
+    position: sticky;
+    top: 0; 
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nav-col { flex: 1; display: flex; align-items: center; }
+.logo-col { justify-content: flex-start; }
+.menu-col { justify-content: center; flex: 2; }
+.user-col { justify-content: flex-end; }
+
+.logo-small { height: 40px; }
+
+.nav-links { 
+    list-style: none; 
+    display: flex; 
+    gap: 25px; 
+}
+
+.nav-links a { 
+    color: var(--blanco); 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 14px; 
+    text-transform: uppercase; 
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active { color: #A0C4FF; }
+
+/* Ícono de Usuario Puro */
+.user-icon i { 
+    color: var(--blanco); 
+    font-size: 26px; 
+    transition: transform 0.3s ease;
+}
+
+.user-icon:hover i { transform: scale(1.1); }
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    width: 25px; height: 3px; background-color: var(--blanco);
+    transition: all 0.3s ease;
+}
+
+/* Menú Móvil Desplegable */
+@media (max-width: 768px) {
+    .navbar { position: static; }
+
+    .menu-toggle { 
+        display: flex; position: absolute; left: 50%; transform: translateX(-50%); 
+    }
+    
+    .nav-links {
+        display: none; flex-direction: column; position: absolute;
+        top: 100%; left: 0; width: 100%; background-color: var(--azul-rey);
+        padding: 25px 0; text-align: center; box-shadow: 0 10px 15px rgba(0,0,0,0.3); z-index: 9999;
+    }
+
+    .nav-links.active { display: flex !important; }
+    .nav-links li { margin: 18px 0; }
+    
+    .logo-col, .user-col { flex: 1; }
+
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+/* ==========================================================================
+   3. BANNER PREMIUM
+   ========================================================================== */
+.banner-imagen-container { 
+    width: 100%; 
+    height: 400px; 
+    position: relative; 
+    overflow: hidden; 
+    border-bottom: 5px solid var(--azul-rey); 
+}
+
+.banner-img { width: 100%; height: 100%; object-fit: cover; opacity: 0.45; }
+
+.banner-overlay { 
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+    text-align: center; width: 90%; 
+}
+
+.banner-overlay h1 { 
+    font-family: var(--fuente-montserrat); font-weight: 900; font-size: 4.5rem; 
+    text-transform: uppercase; letter-spacing: 8px; line-height: 1.1; margin-bottom: 10px;
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0); 
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+.banner-overlay p { 
+    font-family: var(--fuente-montserrat); font-weight: 400; font-size: 1.2rem;
+    text-transform: uppercase; letter-spacing: 5px; text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.8);
+    color: white; 
+}
+
+.banner-overlay p::after {
+    content: ''; display: block; width: 60%; height: 3px; background-color: var(--azul-rey); 
+    margin: 15px auto 0; box-shadow: 0px 0px 10px var(--azul-rey);
+}
+
+@media (max-width: 768px) {
+    .banner-imagen-container { height: 250px; }
+    .banner-overlay h1 { font-size: 2.2rem; letter-spacing: 3px; }
+    .banner-overlay p { font-size: 0.85rem; letter-spacing: 2px; }
+}
+
+/* ==========================================================================
+   4. SECCIÓN DE FILTROS (TABS)
+   ========================================================================== */
+.filter-section { 
+    padding: 30px 5% 10px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+.tabs-container { 
+    display: flex; 
+    gap: 12px; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.tab-btn { 
+    background: #333; 
+    color: #888; 
+    border: none; 
+    padding: 10px 22px; 
+    font-family: var(--fuente-montserrat);
+    font-weight: 800; 
+    text-transform: uppercase; 
+    cursor: pointer; 
+    border-radius: 4px; 
+    font-size: 0.85rem; 
+    transition: 0.3s ease; 
+}
+
+.tab-btn.active { 
+    background: var(--azul-rey); 
+    color: white; 
+    box-shadow: 0 4px 15px rgba(0,65,194,0.4);
+}
+
+/* ==========================================================================
+   5. ESTRUCTURA DEL CARRUSEL (TU DISEÑO ORIGINAL)
+   ========================================================================== */
+.catalog-section {
+    padding: 40px 0 80px;
+    background: radial-gradient(circle at center, #1e1e1e 0%, #121212 100%);
+}
+
+.carousel-wrapper {
+    display: flex; align-items: center; justify-content: center; position: relative;
+    max-width: 1300px; margin: 0 auto; padding: 0 20px;
+}
+
+.carousel-container {
+    display: flex; gap: 30px; overflow-x: auto; scroll-snap-type: x mandatory; 
+    padding: 40px 20px; scroll-behavior: smooth;
+}
+
+.carousel-container::-webkit-scrollbar { display: none; }
+
+/* Botones de Navegación PC */
+.nav-btn {
+    background: var(--azul-rey); color: white; border: none; width: 60px; height: 100px; 
+    position: absolute; top: 50%; transform: translateY(-50%); cursor: pointer; z-index: 100; 
+    font-size: 1.5rem; transition: 0.3s; display: flex; align-items: center; justify-content: center;
+    border-radius: 10px; opacity: 0.6;
+}
+
+.nav-btn:hover { opacity: 1; background: #003399; }
+#prevBtn { left: -70px; }
+#nextBtn { right: -70px; }
+
+/* ==========================================================================
+   6. LA TARJETA 3D (EFECTOS Y ANIMACIONES INTACTOS)
+   ========================================================================== */
+.color-card { flex: 0 0 320px; height: 480px; perspective: 1200px; scroll-snap-align: center; }
+.card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s ease; transform-style: preserve-3d; cursor: pointer; }
+.color-card.is-flipped .card-inner { transform: rotateY(180deg); }
+
+.card-front, .card-back {
+    position: absolute; width: 100%; height: 100%; backface-visibility: hidden;
+    border-radius: 15px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* Frente de la tarjeta */
+.card-front { background: #fff; display: flex; flex-direction: column; }
+.card-color-box { height: 75%; display: flex; flex-direction: column; position: relative; overflow: hidden; }
+
+/* Textura Metalizada */
+.color-full, .color-reduced { 
+    position: relative; width: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+    background-blend-mode: overlay;
+}
+.color-full { flex: 1.2; }
+.color-reduced { flex: 1; border-top: 3px solid #fff; }
+
+.card-color-box::after {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.3) 0%, transparent 50%, rgba(0,0,0,0.2) 100%);
+    pointer-events: none; z-index: 2;
+}
+
+.card-color-box::before {
+    content: ''; position: absolute; top: 0; left: -150%; width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    transform: skewX(-20deg); z-index: 3; pointer-events: none;
+}
+
+.color-card:hover .card-color-box::before { animation: brilloPerla 1.5s infinite; }
+
+@keyframes brilloPerla { 0% { left: -150%; } 100% { left: 150%; } }
+
+.card-info { height: 25%; background: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 15px; }
+.card-info h3 { font-family: var(--fuente-industrial); color: #111; font-size: 1.3rem; font-weight: 900; text-transform: uppercase; margin: 0; }
+.card-info span { font-size: 0.8rem; color: var(--azul-rey); font-weight: 700; margin-top: 8px; text-transform: uppercase; }
+
+/* Trasera de la tarjeta */
+/* Trasera de la tarjeta con SCROLL AUTOMÁTICO */
+.card-back { 
+    background: #f4f7f9; 
+    color: #111; 
+    transform: rotateY(180deg); 
+    padding: 30px 20px; 
+    border-top: 10px solid var(--azul-rey); 
+    display: flex; 
+    flex-direction: column; 
+    overflow-y: auto; /* ESTA ES LA MAGIA: Activa el scroll vertical */
+}
+
+/* Diseño elegante para la barra de scroll de la tarjeta (Opcional pero recomendado) */
+.card-back::-webkit-scrollbar {
+    width: 6px; /* Hace la barra más delgada */
+}
+.card-back::-webkit-scrollbar-track {
+    background: #EAEAEA; 
+    border-radius: 10px;
+}
+.card-back::-webkit-scrollbar-thumb {
+    background: var(--azul-rey); 
+    border-radius: 10px;
+}
+.card-back h2 { font-family: var(--fuente-industrial); font-size: 1.4rem; font-weight: 900; margin-bottom: 20px; border-bottom: 3px solid var(--azul-rey); padding-bottom: 10px; text-transform: uppercase; }
+.tech-box { background: #fff; padding: 15px; border-radius: 6px; margin-bottom: 15px; border-left: 5px solid var(--azul-rey); box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.tech-box strong { font-size: 0.7rem; color: #777; text-transform: uppercase; display: block; margin-bottom: 4px; }
+.tech-box p { font-size: 1.1rem; font-weight: 900; color: var(--azul-rey); margin: 0; }
+.desc-text { font-family: var(--fuente-montserrat); font-size: 0.9rem; color: #444; line-height: 1.5; text-align: left; margin: 0; }
+
+@media (max-width: 1024px) { 
+    .nav-btn { display: none; } 
+}
+
+@media (max-width: 768px) {
+    .color-card { flex: 0 0 85%; height: 460px; }
+    .carousel-container { gap: 15px; padding: 20px 20px; }
+}
+
+/* ==========================================================================
+   7. FOOTER
+   ========================================================================== */
+.footer-copy { 
+    background-color: var(--azul-rey); 
+    color: var(--blanco); 
+    text-align: center; 
+    padding: 30px 5%; 
+    font-size: 0.85rem; 
+    font-family: var(--fuente-montserrat);
+}

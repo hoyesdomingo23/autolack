@@ -1,0 +1,401 @@
+{
+  "poliuretano": [
+  {
+    "nombre": "ESM PUR BLANCO MATE",
+    "hex_lleno": "#F6F9F9",
+    "descripcion": "Acabado de lujo con cero reflejos. Ofrece una superficie tersa, máxima nivelación y una resistencia química superior para acabados exigentes."
+  },
+  {
+    "nombre": "ESM PUR BLANCO SEMIMATE",
+    "hex_lleno": "#F6F9F9",
+    "descripcion": "El equilibrio perfecto entre sobriedad y brillo. Proporciona una terminación satinada, fácil de limpiar y con alta resistencia al amarillamiento."
+  },
+  {
+    "nombre": "ENT PUR BLANCO",
+    "hex_lleno": "#F6F9F9",
+    "descripcion": "Concentrado de alta opacidad y blancura pura. Esencial para aportar cuerpo, brillo y un excelente poder cubriente."
+  },
+  {
+    "nombre": "ENT PUR AMARILLO LIMON",
+    "hex_lleno": "#F2E737",
+    "descripcion": "Entonador orgánico de tono frío y alta saturación. Ideal para crear verdes limpios o amarillos vibrantes con máxima claridad cromática."
+  },
+  {
+    "nombre": "ENT PUR AMARILLO VERDOSO",
+    "hex_lleno": "#FFC013",
+    "descripcion": "Entonador versátil de matiz verdoso. Desarrollado para ajustes de precisión y formulaciones que requieren una excelente dispersión y estabilidad."
+  },
+  {
+    "nombre": "ENT PUR AMARILLO ROJIZO ",
+    "hex_lleno": "#FFAD00",
+    "descripcion": "Tono amarillo rojizo de gran riqueza. Aporta profundidad a la mezcla, siendo la base ideal para desarrollar anaranjados intensos y ocres vivos."
+  },
+  {
+    "nombre": "ENT PUR AMARILLO OXIDO",
+    "hex_lleno": "#C0803F",
+    "descripcion": "Amarillo terroso, sucio y cálido (ocre) de baja saturación natural. Esencial para colores camel, beige y para desaturar tonos vivos sin recurrir al gris o al negro."
+  },
+  {
+    "nombre": "ENT PUR NARANJA",
+    "hex_lleno": "#DE503E",
+    "descripcion": "Un entonador de alta intensidad diseñado para acabados que exigen una durabilidad cromática excepcional a la intemperie."
+  },
+  {
+    "nombre": "ENT PUR ROJO LIMPIO",
+    "hex_lleno": "#C7373F",
+    "descripcion": "Rojo primario neutro de máxima saturación. No presenta subtonos azules ni amarillos evidentes, permitiendo mezclas limpias sin virar hacia el magenta o el naranja."
+  },
+  {
+    "nombre": "ESM PUR ROJO FERRARI ",
+    "hex_lleno": "#B0363C",
+    "descripcion": "Acabado final de alto desempeño. Brinda un color icónico, vibrante y con una retención de brillo superior."
+  },
+  {
+    "nombre": "ENT PUR ROJO",
+    "hex_lleno": "#B0363C",
+    "descripcion": "Rojo de tono medio, alta versatilidad y excelente poder de cubrición. Actúa como el pilar fundamental en la igualación de color por su cromaticidad equilibrada. Al realizar cortes (desaturación) con blanco, revela un subtono ligeramente frío o neutro (hacia el rosado limpio), lo que asegura que las mezclas mantengan su pureza sin virar al naranja o al ladrillo."
+  },
+  {
+    "nombre": "ENT PUR ROJO OXIDO",
+    "hex_lleno": "#8F4842",
+    "descripcion": "Rojo terroso y opaco de baja saturación. Absorbe la luz y es indispensable para apagar (ensuciar) rojos limpios y formular tonos marrones y óxidos."
+  },
+  {
+    "nombre": "ENT PUR VIOLETA ROJIZO",
+    "hex_lleno": "#7F3B45",
+    "descripcion": "Violeta de temperatura cálida (hacia el magenta). Oscurece y enfría los rojos puros, aportando matices vino tinto  y complejidad en mezclas oscuras."
+  },
+  {
+    "nombre": "ENT PUR VIOLETA AZULOSO",
+    "hex_lleno": "#454256",
+    "descripcion": "Violeta frío de baja luminosidad. Clave para oscurecer tonos azules sin \"ensuciarlos\" con negro, y muy útil para neutralizar subtonos amarillentos en grises y platas."
+  },
+  {
+    "nombre": "ENT PUR AZUL",
+    "hex_lleno": "#37446A",
+    "descripcion": "Azul de alta fuerza tintórea con subtono levemente rojizo. Muy oscuro en estado puro, pero al abrirse con blanco revela un tono azul cielo limpio y vibrante."
+  },
+  {
+    "nombre": "ENT PUR VERDE",
+    "hex_lleno": "#304B43",
+    "descripcion": "Verde de tendencia azulada. Tono muy dominante en mezclas; requiere la intervención de amarillos limpios para virar hacia tonos manzana."
+  },
+  {
+    "nombre": "ENT PUR NEGRO",
+    "hex_lleno": "#3B3C3C",
+    "descripcion": "Negro profundo con subtono azulado. Al realizar cortes (mezclas) con blanco, genera grises fríos y acerados en lugar de grises neutros o terrosos."
+  },
+  {
+    "nombre": "ENT PUR NEGRO SEMIMATE",
+    "hex_lleno": "#3B3C3C",
+    "descripcion": "Negro de medio brillo. La dispersión satinada de la luz suaviza ópticamente la dureza del color, creando un negro menos agresivo visualmente que el brillante."
+  },
+  {
+    "nombre": "ENT PUR NEGRO MATE",
+    "hex_lleno": "#3F4040",
+    "descripcion": "Negro de matizado total. El acabado mate dispersa la luz en todas direcciones, lo que hace que visualmente el negro se perciba con un acabado mas terso."
+  },
+  {
+    "nombre": "ESM PUR METALIZADO FINO",
+    "hex_lleno": "#B4B7B8",
+    "descripcion": "Partícula de aluminio de corte fino. Genera alta reflectancia frontal  y un \"flop\" (vista lateral) claro, creando una superficie metálica continua y homogénea."
+  },
+  {
+    "nombre": "ESM PUR METALIZADO GRUESO",
+    "hex_lleno": "#BBBFBF",
+    "descripcion": "Partícula grande que genera alto contraste. Oscurece el tono frontal pero crea intensos destellos de luz multidireccionales, alterando la percepción del brillo."
+  }
+],
+  "perlas_aluminios": [
+  {
+    "nombre": "ALUMINIO FINO",
+    "hex_lleno": "#DBDFDF",
+    "hex_reducido": "#00A4C7",
+    "base_reducido": "ENT PS AZUL",
+    "dilucion": "1:1",
+    "descripcion": "Pigmento metálico de tamaño de partícula fino efecto con alta cobertura y chispa baja."
+  },
+  {
+    "nombre": "ALUMINIO MEDIO",
+    "hex_lleno": "#DBDEDE",
+    "hex_reducido": "#009FC2",
+    "base_reducido": "ENT PS AZUL",
+    "dilucion": "1:1",
+    "descripcion": "Pigmento metálico de tamaño un poco mas grande que el ultrafino. con alta/medio nivel de cobertura y una chispa media"
+  },
+  {
+    "nombre": "ALUMINIO GRUESO",
+    "hex_lleno": "#E4E7E6",
+    "hex_reducido": "#008DB7",
+    "base_reducido": "ENT PS AZUL",
+    "dilucion": "1:1",
+    "descripcion": "Pigmento metálico de baja cobertura pero con alta chispa. En combinacion con otros aluminios se obtiene gran variedad de efectos "
+  },
+  {
+    "nombre": "ALUMINIO FINO LENTICULAR",
+    "hex_lleno": "#E6E8E7",
+    "hex_reducido": "#00A7CA",
+    "base_reducido": "ENT PS AZUL",
+    "dilucion": "1:1",
+    "descripcion": "Pigmento metalico de tamaño de particula fino con alto nivel de cobertura. Genera una chispa levemente superior al Aluminio fino "
+  },
+  {
+    "nombre": "ALUMINIO MEDIO LENTICULAR",
+    "hex_lleno": "#E3E6E5",
+    "hex_reducido": "#00A6C7",
+    "base_reducido": "ENT PS AZUL",
+    "dilucion": "1:1",
+    "descripcion": "Pigmento metalico con mayor brillo que el aluminio medio convencional, pero con un alto/medio nivel de cobertura"
+  },
+  {
+    "nombre": "ALUMINIO GRUESO LENTICULAR",
+    "hex_lleno": "# DFE2E1",
+    "hex_reducido": "#008BB5",
+    "base_reducido": "ENT PS AZUL",
+    "dilucion": "1:1",
+    "descripcion": "Pigmento metálico de baja cobertura para colores con necesidad de alta chispa y limpieza. En combinacion con otros aluminios se obtiene gran variedad de efectos "
+  },
+  {
+    "nombre": "PERLA BLANCA AURALICX",
+    "hex_lleno": "#F5F7F3",
+    "hex_reducido": "#6B716C",
+    "base_reducido": "ENT PS NEGRO",
+    "dilucion": "1:1",
+    "descripcion": "Genera un destello blanco/plateado cristalino de máxima reflectancia. Al evaluarse sobre fondos oscuros, revela una chispa intensa y limpia, ideal para acabados tricapa premium y blancos perlados de alta gama"
+  },
+  {
+    "nombre": "PERLA AZUL AURALICX",
+    "hex_lleno": "#E9F1F4",
+    "hex_reducido": "#0077BA",
+    "base_reducido": "ENT PS AZUL",
+    "dilucion": "1:1",
+    "descripcion": "Aporta un destello azul vibrante y muy limpio bajo luz directa. Su alta transparencia permite lograr azules de máxima profundidad óptica, destacando excepcionalmente en sistemas bicapa complejos."
+  },
+  {
+    "nombre": "PERLA VERDE AURALICX",
+    "hex_lleno": "#EDF3E7",
+    "hex_reducido": "#008EE5B",
+    "base_reducido": "ENT PS VERDE AZULOSO",
+    "dilucion": "1:1",
+    "descripcion": "Produce un centelleo verde esmeralda brillante y puro. Al integrarse con tonos verde azulados, maximiza la saturación frontal y ofrece un flop (vista lateral) sumamente oscuro y limpio"
+  },
+  {
+    "nombre": "PERLA COBRE AURALICX",
+    "hex_lleno": "#DE6C4F",
+    "hex_reducido": "#A74543",
+    "base_reducido": "ENT PS MARRON",
+    "dilucion": "1:1",
+    "descripcion": "Genera un destello cobrizo multidireccional. Excelente para enriquecer tonos marrones, dorados y naranjas, aportando un efecto fuego profundo, vivo y vibrante."
+  },
+  {
+    "nombre": "PERLA ROJA AURALICX",
+    "hex_lleno": "#BA5059",
+    "hex_reducido": "#A04046",
+    "base_reducido": "ENT PS ROJO",
+    "dilucion": "1:1",
+    "descripcion": "Pigmento perlado premium que aporta un destello rojo puro, luminoso y sin turbidez. Esencial para colores cálidos de exhibición, donde se busca una chispa deslumbrante sin opacar el color de fondo."
+  },
+  {
+    "nombre": "PERLA AMARILLA",
+    "hex_lleno": "#F4EFD9",
+    "hex_reducido": "#EFAF4D",
+    "base_reducido": "ENT PS AMARILLO TRANSPARENTE",
+    "dilucion": "1:1",
+    "descripcion": "Aporta un reflejo amarillo/dorado suave y elegante. Ideal para iluminar mezclas claras, formulaciones beige o para aportar un brillo sutil en colores cálidos."
+  },
+  {
+    "nombre": "PERLA ROJA",
+    "hex_lleno": "#BF636A",
+    "hex_reducido": "#A2414A",
+    "base_reducido": "ENT PS ROJO",
+    "dilucion": "1:1",
+    "descripcion": "Ofrece un reflejo rojo sedoso y de buena cobertura. Funciona como un excelente modificador de matiz para aportar calidez, profundidad y un efecto clásico a los rojos"
+  },
+  {
+    "nombre": "PERLA VERDE",
+    "hex_lleno": "#EDF0E3",
+    "hex_reducido": "#009965",
+    "base_reducido": "ENT PS VERDE AZULOSO",
+    "dilucion": "1:1",
+    "descripcion": "Proporciona un efecto suave y continuo. Muy útil para matizar colores oscuros, crear transiciones sutiles en tonos azulados o potenciar la luminosidad de los verdes sólidos."
+  },
+  {
+    "nombre": "PERLA AZUL",
+    "hex_lleno": "#E7ECEB",
+    "hex_reducido": "#0074B4",
+    "base_reducido": "ENT PS AZUL",
+    "dilucion": "1:1",
+    "descripcion": "Genera una iridiscencia suave, uniforme y de excelente anclaje. Fundamental en el laboratorio para formular azules aportando un toque frío y luminoso a platas y grises."
+  },
+  {
+    "nombre": "PERLA VIOLETA",
+    "hex_lleno": "#EBEBE8",
+    "hex_reducido": "#4B4675",
+    "base_reducido": "ENT PS VIOLETA AZULOSO",
+    "dilucion": "1:1",
+    "descripcion": "Aporta un reflejo profundo y misterioso, excelente para modificar el matiz en el ángulo lateral (flop) de tonos oscuros, azules y negros, creando acabados muy elegantes."
+  },
+  {
+    "nombre": "PERLA BLANCA",
+    "hex_lleno": "#F2F3ED",
+    "hex_reducido": "#676968",
+    "base_reducido": "ENT PS NEGRO",
+    "dilucion": "1:1",
+    "descripcion": "Ofrece un brillo sedoso y homogéneo con excelente poder de cubrición. Es la base técnica para los clásicos blancos perlados y para aclarar mezclas aportando luminosidad física"
+  }
+],
+  "poliester": [
+  {
+    "nombre": "ENT PS BLANCO MICRONIZADO",
+    "hex_lleno": "#ECEFEE",
+    "hex_reducido": "#C5C3C0",
+    "base_reducido": "ALUMINIO MEDIO LENTICULAR",
+    "dilucion": "1:1",
+    "descripcion": "Entonador irremplazable con subtono azuloso. El uso de este en aluminios aporta un color dorado en frente y azuloso en el flop. En negros resalta un subtono azuloso en comparación al Entonados ps blanco"
+  },
+  {
+    "nombre": "ENT PS BLANCO",
+    "hex_lleno": "#F6FAFA",
+    "hex_reducido": "#6E7275",
+    "base_reducido": "ENT PS NEGRO",
+    "dilucion": "1:1",
+    "descripcion": "Entonador blanca de alta fuerza tintórea y subtono azuloso. El uso de este en aluminios y perlas debe ser graduado ya que en altas cantidades su efecto puede perderse"
+  },
+  {
+    "nombre": "ENT PS BLANCO TRANSPARENTE",
+    "hex_lleno": "#EEF0ED",
+    "hex_reducido": "#45484A",
+    "base_reducido": "ENT PS NEGRO",
+    "dilucion": "1:1",
+    "descripcion": "Entonador con subtono levemente azuloso. El uso de este en aluminios y perlas aclara el ángulo sin ocultar los efectos, sin embargo, no se recomienda su uso en altas cantidades ya que los efectos pueden desaparecer. "
+  },
+  {
+    "nombre": "ENT PS NEGRO",
+    "hex_lleno": "#3D3E3E",
+    "hex_reducido": "#88847E",
+    "base_reducido": "ALUMINIO MEDIO LENTICULAR",
+    "dilucion": "1:1",
+    "descripcion": "Entonador negro de alta fuerza tintórea y subtono amarilloso. El uso de este debe ser graduado ya que en altas cantidades oscurece los tonos claros, ademas de oscurecer el angulo y el frente "
+  },
+  {
+    "nombre": "ENT PS VERDE AZULOSO",
+    "hex_lleno": "#2B4F44",
+    "hex_reducido": "#59C8A7",
+    "base_reducido": "ALUMINIO MEDIO LENTICULAR",
+    "dilucion": "1:1",
+    "descripcion": "Entonador de subtono azuloso. con alta transparencia y con alta tonalidad en el angulo "
+  },
+  {
+    "nombre": "ENT PS AZUL VERDOSO",
+    "hex_lleno": "#224E63",
+    "hex_reducido": "#46BED7",
+    "base_reducido": "ALUMINIO MEDIO LENTICULAR",
+    "dilucion": "1:1",
+    "descripcion": "Subtono verdoso limpio en los diferentes angulos de vision. Neutraliza subtonos rojizos intensificando los verdosos. "
+  },
+  {
+    "nombre": "ENT PS AZUL LIMPIO",
+    "hex_lleno": "#31445E",
+    "hex_reducido": "#00ACD2",
+    "base_reducido": "ALUMINIO MEDIO LENTICULAR",
+    "dilucion": "1:1",
+    "descripcion": "Subtono levemente verdoso. Limpio en ambos ángulos y de alta fuerza tintorea "
+  },
+  {
+    "nombre": "ENT PS AZUL ",
+    "hex_lleno": "#2A4876",
+    "hex_reducido": "#00A4C7",
+    "base_reducido": "ALUMINIO MEDIO LENTICULAR",
+    "dilucion": "1:1",
+    "descripcion": "Entonador con subtono verdoso en el frente y levemente rojizo en el ángulo. "
+  },
+  {
+    "nombre": "ENT PS VIOLETA AZULOSO",
+    "hex_lleno": "#46444C",
+    "hex_reducido": "#635FA4",
+    "base_reducido": "ALUMINIO MEDIO LENTICULAR",
+    "dilucion": "1:1",
+    "descripcion": "Entonador de subtono azuloso, alta fuerza tintorea. Limpia y realza tonos azules en los dos angulos. Neutraliza colores verde y amarillas en ambos angulos"
+  },
+  {
+    "nombre": "ENT PS AMARILLO LIMON",
+    "hex_lleno": "#F8E52C",
+    "hex_reducido": "#C3C286",
+    "base_reducido": "ALUMINIO MEDIO LENTICULAR",
+    "dilucion": "1:1",
+    "descripcion": "Entonador con subtono verdoso muy limpio. principalmente usados para intensificar los colores. en aluminios, platas y verdes proporciona subtono amarilloso en el ángulo"
+  },
+  {
+    "nombre": "ENT PS AMARILLO TRANSPARENTE",
+    "hex_lleno": "#DA8B3F",
+    "hex_reducido": "#DDCDA8",
+    "base_reducido": "ALUMINIO MEDIO LENTICULAR",
+    "dilucion": "1:1",
+    "descripcion": "Entonador con subtono verdoso. Alta transparencia y excelente fuerza tintorea. Base irremplazable"
+  },
+  {
+    "nombre": "ENT PS AMARILLO OXIDO",
+    "hex_lleno": "#C88644",
+    "hex_reducido": "#C59C63",
+    "base_reducido": "ALUMINIO MEDIO LENTICULAR",
+    "dilucion": "1:1",
+    "descripcion": "Entonador de subtono rojizo, de excelente cobertura. Resalta tonalidades amarillosas en colores metalizados. "
+  },
+  {
+    "nombre": "ENT PS ROJO TRANSPARENTE",
+    "hex_lleno": "#6D4242",
+    "hex_reducido": "#E2AA79",
+    "base_reducido": "ALUMINIO MEDIO LENTICULAR",
+    "dilucion": "1:1",
+    "descripcion": "Entonador con subtono amariloso. En combinacion con aluminios se obtienen colores dorados rojizos, entonador de alta trasparencia y fuerza tintorea; ideal para tonos beige"
+  },
+  {
+    "nombre": "ENT PS VIOLETA ROJIZO",
+    "hex_lleno": "#6E3B42",
+    "hex_reducido": "#9E78A2",
+    "base_reducido": "ALUMINIO MEDIO LENTICULAR",
+    "dilucion": "1:1",
+    "descripcion": "Entonador de subtono azulado, levemente rojizo. Resalta la tonalidad azulosa en perlas rojas. En verdes ensucia el color y en azules aporta tonos rojizos"
+  },
+  {
+    "nombre": "ENT PS MARRON ",
+    "hex_lleno": "#743E43",
+    "hex_reducido": "#BA6F6C",
+    "base_reducido": "ALUMINIO MEDIO LENTICULAR",
+    "dilucion": "1:1",
+    "descripcion": "Entonador de subtono azuloso de alta fuerza tintorea. realza la intensidad de los colores y perlas rojas "
+  },
+  {
+    "nombre": "ENT PS ROJO LIMPIO",
+    "hex_lleno": "#C23A40",
+    "hex_reducido": "#B55F67",
+    "base_reducido": "ALUMINIO MEDIO LENTICULAR",
+    "dilucion": "1:1",
+    "descripcion": "Entonador levemente amarilloso de alta fuerza tintorea."
+  },
+  {
+    "nombre": "ENT PS ROJO",
+    "hex_lleno": "#A2383E",
+    "hex_reducido": "#B49094",
+    "base_reducido": "ALUMINIO MEDIO LENTICULAR",
+    "dilucion": "1:1",
+    "descripcion": "Entonador de subotono levemente azuloso, alta fuerza tintorea.  Muy util en entonación de bases rojas "
+  },
+  {
+    "nombre": "ENT PS ROJO OSCURO",
+    "hex_lleno": "#9D373F",
+    "hex_reducido": "#C6788B",
+    "base_reducido": "ALUMINIO MEDIO LENTICULAR",
+    "dilucion": "1:1",
+    "descripcion": "Rojo baja luminosidad con una clara tendencia fría. Su naturaleza oscura aporta una excelente profundidad en el ángulo frontal. Al realizar el corte con aluminio, revela un subtono rosa/magenta, lo que garantiza mezclas limpias sin desviaciones hacia tonos anaranjados o amarillos"
+  },
+  {
+    "nombre": "ENT PS ROJO PROFUNDO",
+    "hex_lleno": "#AE333E",
+    "hex_reducido": "#D09BAC",
+    "base_reducido": "ALUMINIO MEDIO LENTICULAR",
+    "dilucion": "1:1",
+    "descripcion": "Entonador de subotono azuloso, alta transparencia y fuerza tintorea. se realza en combinacion con perlas.  Base bastante utilizada en rojos de alta limpieza: bicapas, perlados y tricapas"
+  }
+]
+}

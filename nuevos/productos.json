@@ -1,0 +1,37 @@
+{
+    "lanzamiento-1": {
+        "titulo": "Barniz HS - Nueva imagen",
+        "tipo": "comparar",
+        "imagen_antes": "imagenes/barnizp.png",
+        "imagen_despues": "imagenes/barnizhs.png",
+        "descripcion": "Presentamos la evolución de nuestro Barniz HS, ahora con una imagen renovada que refleja la tecnología y calidad superior de Industrias Autolack. Formulado para los profesionales más exigentes, este barniz combina una transparencia excepcional con una protección de largo alcance, manteniendo la confianza y los resultados de alto nivel que ya conoces..",
+        "specs": [
+            "Acabado Espejo de Alto Brillo: Proporciona una profundidad estética superior y una nivelación perfecta, ideal para acabados de exhibición.",
+            "Secado Más Rápido: Optimiza el flujo de trabajo en cabina, permitiendo procesos de pulido y entrega en tiempos récord sin sacrificar la dureza.",
+            "Alto Contenido de Sólidos (HS): Mayor capacidad de relleno y rendimiento por pieza, reduciendo el número de manos necesarias y el impacto ambiental"
+        ]
+    },
+    "lanzamiento-2": {
+        "titulo": "ENT PS Rojo Extrarojo",
+        "tipo": "estandar",
+        "imagen": "imagenes/lan2.png",
+        "descripcion": "La pureza del color en su estado más intenso. Nuestro Rojo Extrarojo está formulado con pigmentos solventes de alta transparencia, diseñados para crear un efecto de profundidad tridimensional. A diferencia de las bases convencionales, este tinte permite que la luz atraviese la capa de color, generando un rojo vibrante y cristalino que parece iluminado desde el interior. Es el componente esencial para lograr el icónico acabado 46V con una fidelidad absoluta.",
+        "specs": [
+            "Máximo Croma (Saturación): Logra un nivel de 'rojo puro' que supera los límites de los pigmentos orgánicos tradicionales, ideal para efectos tipo candy",
+            "Tecnología de Pigmento: Utiliza moléculas de color ultra-finas que garantizan una transparencia total, eliminando la turbidez y maximizando la limpieza del tono",
+            "Uniformidad de Capa: Su naturaleza poliéster facilita una aplicación controlada, permitiendo que el pintor ajuste la intensidad del color mediante el número de pasadas sin perder la claridad."
+        ]
+    },
+    "lanzamiento-3": {
+        "titulo": "Poliéster Premium",
+        "tipo": "estandar",
+        "imagen": "../assets/prod3.jpg",
+        "descripcion": "Línea de color de alta cubrición. Colores vivos y estables para un repintado profesional exigente.",
+        "specs": [
+            "Excelente cubrimiento en menos capas",
+            "Fácil aplicación (Blending)",
+            "Estabilidad de color garantizada"
+        ]
+    }
+   
+}

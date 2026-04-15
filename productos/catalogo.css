@@ -1,0 +1,188 @@
+/* ==========================================================================
+   ESTILOS DEL CATÁLOGO DINÁMICO - ESTILO INDUSTRIAL GRIS
+   ========================================================================== */
+
+/* 1. Banner Premium Alargado */
+.banner-imagen-container {
+    width: 100%;
+    height: 500px; 
+    background-color: var(--negro);
+    overflow: hidden; 
+    border-bottom: 6px solid var(--azul-rey);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%; 
+    display: block;
+    object-fit: cover; 
+    opacity: 0.55; 
+}
+
+.banner-overlay {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white; 
+    text-align: center; 
+    width: 90%; 
+    z-index: 10;
+}
+
+.banner-overlay h1 { 
+    font-family: var(--fuente-montserrat);
+    font-weight: 900; 
+    font-size: 4.5rem; 
+    text-transform: uppercase; 
+    letter-spacing: 8px; 
+    line-height: 1.1; 
+    margin-bottom: 10px;
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0); 
+    -webkit-background-clip: text; 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.banner-overlay p { 
+    font-family: var(--fuente-montserrat);
+    font-weight: 400; 
+    font-size: 1.2rem;
+    text-transform: uppercase; 
+    letter-spacing: 5px;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.banner-overlay p::after {
+    content: ''; display: block; width: 60%; height: 3px;
+    background-color: var(--azul-rey); margin: 15px auto 0;
+    box-shadow: 0px 0px 10px var(--azul-rey);
+}
+
+/* 2. Contenedor del Listado */
+.categorias-container {
+    padding: 80px 3% 100px;
+    background-color: var(--blanco-gris);
+}
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* 3. Tarjetas de Producto con Fondo Gris Industrial */
+.cat-card {
+    background: #A6A6A6; /* Gris que complementa el tarro */
+    border-radius: 8px; /* Bordes más rectos para look industrial */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    text-decoration: none;
+}
+
+.cat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 65, 194, 0.25);
+}
+
+.cat-img {
+    height: 280px; /* Ajustado para que el tarro sea el protagonista */
+    background-color: #afaeaed7; /* Fondo igual al de la imagen del producto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Menos espacio para que el tarro se vea más grande */
+    position: relative;
+    border-bottom: 4px solid var(--azul-rey);
+}
+
+.cat-img img {
+    width: 100%; /* El tarro ahora ocupa todo el ancho posible */
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
+}
+
+.cat-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 65, 194, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.cat-card:hover .cat-overlay { opacity: 1; }
+
+.btn-ver {
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 4px; /* Botón cuadrado industrial */
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Info del Producto sobre Fondo Azul o Blanco */
+.cat-info {
+    padding: 15px;
+    text-align: center;
+    background: #FFFFFF; /* Fondo blanco para que el texto sea legible */
+    flex-grow: 1;
+}
+
+.cat-info h2 {
+    font-family: var(--fuente-industrial);
+    font-size: 1.1rem;
+    color: var(--negro);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    line-height: 1.1;
+}
+
+.cat-info p {
+    font-family: var(--fuente-montserrat);
+    font-size: 0.8rem;
+    color: #444;
+    line-height: 1.3;
+}
+
+/* ==========================================================================
+   RESPONSIVO
+   ========================================================================== */
+@media (max-width: 1400px) {
+    .categorias-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 1100px) {
+    .categorias-grid { grid-template-columns: repeat(3, 1fr); }
+    .banner-overlay h1 { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+    .categorias-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .banner-imagen-container { height: 250px; }
+    .banner-overlay h1 { font-size: 2.2rem; letter-spacing: 3px; }
+    .cat-img { height: 220px; }
+}
+
+@media (max-width: 480px) {
+    .categorias-grid { grid-template-columns: 1fr; }
+}

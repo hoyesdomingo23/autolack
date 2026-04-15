@@ -1,0 +1,316 @@
+/* ==========================================================================
+   1. VARIABLES GLOBALES Y RESET (CON PROTECCIÓN ANTI-DESBORDAMIENTO)
+   ========================================================================== */
+:root {
+    --azul-rey: #0041C2;
+    --blanco-gris: #F2F2F2;
+    --blanco: #FFFFFF;
+    --negro: #1A1A1A;
+    --fuente-montserrat: 'Montserrat', sans-serif;
+    --fuente-industrial: 'Barlow Semi Condensed', sans-serif;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+html, body {
+    overflow-x: hidden; 
+    width: 100%;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+body { 
+    font-family: var(--fuente-montserrat); 
+    background-color: var(--blanco-gris); 
+}
+
+img, iframe, video {
+    max-width: 100% !important;
+}
+
+/* ==========================================================================
+   2. HEADER Y MENÚ HAMBURGUESA
+   ========================================================================== */
+.main-header {
+    background-color: var(--azul-rey);
+    padding: 10px 5%;
+    position: sticky;
+    top: 0; 
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nav-col { flex: 1; display: flex; align-items: center; }
+.logo-col { justify-content: flex-start; }
+.menu-col { justify-content: center; flex: 2; }
+.user-col { justify-content: flex-end; }
+
+.logo-small { height: 40px; }
+
+/* Menú en Escritorio */
+.nav-links { 
+    list-style: none; 
+    display: flex; 
+    gap: 25px; 
+}
+
+.nav-links a { 
+    color: var(--blanco); 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 14px; 
+    text-transform: uppercase; 
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover { color: #A0C4FF; }
+
+/* Ícono de Usuario (Puro y sin texto) */
+.user-icon i { 
+    color: var(--blanco); 
+    font-size: 26px; 
+    transition: transform 0.3s ease;
+}
+
+.user-icon:hover i { transform: scale(1.1); }
+
+/* Botón 3 líneas (Oculto en PC) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--blanco);
+    transition: all 0.3s ease;
+}
+
+/* Responsivo Header (Móvil) - CENTRADO PERFECTO DEL MENÚ */
+@media (max-width: 768px) {
+    .navbar {
+        position: static; /* Permite que el menú desplegable tome el header como límite */
+    }
+
+    .menu-toggle { 
+        display: flex; 
+        position: absolute; 
+        left: 50%;
+        transform: translateX(-50%); 
+    }
+    
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Cae exactamente debajo del header azul */
+        left: 0;
+        width: 100%; /* Ocupa toda la pantalla de lado a lado */
+        background-color: var(--azul-rey);
+        padding: 25px 0;
+        text-align: center;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+        z-index: 9999;
+    }
+
+    .nav-links.active { display: flex !important; }
+    
+    /* Espaciado de los links en móvil para tocar fácil con el dedo */
+    .nav-links li { margin: 18px 0; }
+    
+    .logo-col { flex: 1; }
+    .user-col { flex: 1; justify-content: flex-end; }
+
+    /* Animación X en las barras */
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+/* ==========================================================================
+   3. BANNER PREMIUM
+   ========================================================================== */
+.banner-imagen-container {
+    width: 100%;
+    height: 450px; 
+    background-color: var(--negro); 
+    overflow: hidden; 
+    border-bottom: 6px solid var(--azul-rey);
+    display: flex;
+    align-items: center;
+    position: relative; 
+}
+
+.banner-img {
+    width: 100%; height: 100%; object-fit: cover; opacity: 0.55; 
+}
+
+.banner-overlay {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+    color: white; text-align: center; width: 90%; z-index: 10;
+}
+
+.banner-overlay h1 { 
+    font-family: var(--fuente-montserrat);
+    font-weight: 900; font-size: 4.5rem; text-transform: uppercase; letter-spacing: 8px; 
+    line-height: 1.1; margin-bottom: 10px; text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0); 
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+.banner-overlay p { 
+    font-family: var(--fuente-montserrat);
+    font-weight: 400; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 5px;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.banner-overlay p::after {
+    content: ''; display: block; width: 60%; height: 3px;
+    background-color: var(--azul-rey); margin: 15px auto 0;
+    box-shadow: 0px 0px 10px var(--azul-rey);
+}
+
+@media (max-width: 768px) {
+    .banner-imagen-container { height: 250px; }
+    .banner-overlay h1 { font-size: 2.2rem; letter-spacing: 3px; }
+    .banner-overlay p { font-size: 0.85rem; letter-spacing: 2px; }
+}
+
+/* ==========================================================================
+   4. TARJETAS DE CATEGORÍAS DE PRODUCTOS
+   ========================================================================== */
+.categorias-container {
+    padding: 80px 5%;
+    background-color: var(--blanco-gris);
+}
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.cat-card {
+    background-color: var(--blanco);
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--negro);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    border-bottom: 6px solid var(--azul-rey);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.cat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 65, 194, 0.15);
+}
+
+.cat-img {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cat-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Capa azul que aparece al pasar el mouse */
+.cat-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 65, 194, 0.85); /* Azul Rey con opacidad */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.cat-card:hover .cat-img img { transform: scale(1.1); }
+.cat-card:hover .cat-overlay { opacity: 1; }
+
+.btn-ver {
+    color: var(--blanco);
+    font-family: var(--fuente-montserrat);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: 2px solid var(--blanco);
+    padding: 10px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ver:hover {
+    background-color: var(--blanco);
+    color: var(--azul-rey);
+}
+
+.cat-info {
+    padding: 30px 25px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.cat-info h2 {
+    font-family: var(--fuente-montserrat);
+    color: var(--azul-rey);
+    font-weight: 900;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.cat-info p {
+    font-family: var(--fuente-montserrat);
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsivo para el Grid de Productos */
+@media (max-width: 768px) {
+    .categorias-grid { gap: 30px; }
+    .cat-img { height: 220px; }
+    .cat-info h2 { font-size: 1.5rem; }
+}
+
+/* ==========================================================================
+   5. FOOTER
+   ========================================================================== */
+.footer-copy { 
+    background-color: var(--azul-rey); 
+    color: var(--blanco); 
+    text-align: center; 
+    padding: 30px 5%; 
+    font-size: 0.85rem; 
+    font-family: var(--fuente-montserrat);
+}
