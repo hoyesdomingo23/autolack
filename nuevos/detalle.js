@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
             // --- CONFIGURACIÓN DE WHATSAPP ---
-            const waNumber = "573000000000"; // Reemplaza con tu número
+            const waNumber = "573244171853"; // Reemplaza con tu número
             const waMsg = `Hola Industrias Autolack, me interesa cotizar el producto: ${info.titulo}`;
             const whatsappLink = document.getElementById('whatsapp-link');
             
