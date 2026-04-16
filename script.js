@@ -98,8 +98,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 });
+
 /* ==========================================================================
-   LÓGICA DEL MODAL MULTI-FLYER - INDUSTRIAS AUTOLACK
+   4. LÓGICA DEL MODAL MULTI-FLYER - INDUSTRIAS AUTOLACK
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -160,27 +161,33 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 4. Mostrar el modal con retraso
-    setTimeout(() => {
-    if (modal) {
-        modal.style.display = 'flex';
-        startAutoPlay();
-    }
-}, 200);
+    // 4. Mostrar el modal solo si NO ha sido cerrado en esta sesión
+    const modalCerrado = sessionStorage.getItem('modalAutolackVisto');
 
-    // 5. Cerrar el modal
+    if (!modalCerrado) {
+        setTimeout(() => {
+            if (modal) {
+                modal.style.display = 'flex';
+                startAutoPlay();
+            }
+        }, 200);
+    }
+
+    // 5. Cerrar el modal y guardar en la memoria de la sesión
     if (closeBtn) {
         closeBtn.addEventListener('click', () => {
             modal.style.display = 'none';
             stopAutoPlay();
+            sessionStorage.setItem('modalAutolackVisto', 'true'); // Crea la "etiqueta"
         });
     }
 
-    // Cerrar si hacen clic en el fondo oscuro
+    // Cerrar si hacen clic en el fondo oscuro y guardar en memoria
     window.addEventListener('click', (e) => {
         if (e.target === modal) {
             modal.style.display = 'none';
             stopAutoPlay();
+            sessionStorage.setItem('modalAutolackVisto', 'true'); // Crea la "etiqueta"
         }
     });
 });
