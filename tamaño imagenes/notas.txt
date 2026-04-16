@@ -1,3 +1,9 @@
 git add .
 git commit -m "Cambio de flyers y ajuste de colores en el muestrario"
 git push origin main
+
+
+
+
+https://pagespeed.web.dev/
+https://squoosh.app/editor 
