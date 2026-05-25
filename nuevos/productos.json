@@ -1,5 +1,16 @@
 {
     "lanzamiento-1": {
+        "titulo": "Azul especial",
+        "tipo": "estandar",
+        "imagen": "imagenes/lan3.jpg",
+        "descripcion": "El Azul Especial es la más reciente adición a nuestra línea de acabados automotrices de alta gama Poliéster Core Colors. Desarrollado con tecnología de pigmentación de última generación, este color ofrece un tono azul profundo, vibrante y de alta pureza, diseñado específicamente para resaltar las líneas aerodinámicas y los volúmenes del vehículo bajo cualquier condición de luz. Su formulación avanzada garantiza una excelente consistencia en el color, minimizando el riesgo de veteado y facilitando una aplicación homogénea y tersa sobre la pieza",
+        "specs": [
+            "Alto Poder de Cubrimiento: Optimiza el consumo de material y reduce el número de manos necesarias para alcanzar la opacidad total.",
+            "Compatibilidad: Totalmente compatible con los sistemas de barniz (transparentes) poliuretano de la línea, asegurando una adherencia óptima y un brillo final espectacular y duradero.",
+            "AExcelente Orientación de Pigmentos: Logra un efecto visual limpio, uniforme y de gran profundidad cromática."
+        ]
+    },
+    "lanzamiento-2": {
         "titulo": "Barniz HS - Nueva imagen",
         "tipo": "comparar",
         "imagen_antes": "imagenes/barnizp.png",
@@ -11,7 +22,7 @@
             "Alto Contenido de Sólidos (HS): Mayor capacidad de relleno y rendimiento por pieza, reduciendo el número de manos necesarias y el impacto ambiental"
         ]
     },
-    "lanzamiento-2": {
+    "lanzamiento-3": {
         "titulo": "ENT PS Rojo Extrarojo",
         "tipo": "estandar",
         "imagen": "imagenes/lan2.png",
@@ -22,7 +33,7 @@
             "Uniformidad de Capa: Su naturaleza poliéster facilita una aplicación controlada, permitiendo que el pintor ajuste la intensidad del color mediante el número de pasadas sin perder la claridad."
         ]
     },
-    "lanzamiento-3": {
+    "lanzamiento-4": {
         "titulo": "Poliéster Premium",
         "tipo": "estandar",
         "imagen": "../assets/prod3.jpg",
