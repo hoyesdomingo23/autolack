@@ -158,10 +158,11 @@
             { "nombre": "CATALIZADOR PUR 412", "imagen": "tarros/AUXILIAR.webp", "pdf": "fichastecnicas/Auxiliares/FT CATALIZADOR PUR 412.pdf" },
             { "nombre": "CATALIZADOR PUR 411", "imagen": "tarros/AUXILIAR.webp", "pdf": "fichastecnicas/Auxiliares/FT CATALIZADOR PUR 411.pdf" },
             { "nombre": "CATALIZADOR PUR 410", "imagen": "tarros/AUXILIAR.webp", "pdf": "fichastecnicas/Auxiliares/FT CATALIZADOR PUR 410.pdf" },
-            { "nombre": "CATALIZADOR EP 710", "imagen": "tarros/dil.webp", "pdf": "fichastecnicas/Auxiliares/" },
+            { "nombre": "CATALIZADOR EP 710", "imagen": "tarros/dil.webp", "pdf": "fichastecnicas/Auxiliares/FT CATALIZADOR EP 710.pdf" },
             { "nombre": "CATALIZADOR HS", "imagen": "tarros/AUXILIAR.webp", "pdf": "fichastecnicas/Auxiliares/FT CATALIZADOR HS.pdf" },
-            { "nombre": "CATALIZADOR AUTOIMPRIMANTE", "imagen": "tarros/AUXILIAR.webp", "pdf": "fichastecnicas/Auxiliares/FT CATALIZADOR AUTOIMPRIMANTE.pdf" },
+            { "nombre": "CATALIZADOR AUTOIMPRIMANTE", "imagen": "tarros/dil.webp", "pdf": "fichastecnicas/Auxiliares/FT CATALIZADOR AUTOIMPRIMANTE.pdf" },
             { "nombre": "CATALIZADOR PUR IND", "imagen": "tarros/AUXILIAR.webp", "pdf": "fichastecnicas/Auxiliares/" },
+            { "nombre": "ENDURECEDOR POLIURETANO", "imagen": "tarros/AUXILIAR.webp", "pdf": "fichastecnicas/Auxiliares/FT ENDURECEDOR POLIUERTANO.pdf" },
             { "nombre": "MASILLA POLIESTER", "imagen": "tarros/masilla.png", "pdf": "fichastecnicas/Masillas/FT MASILLA.pdf" }
         ]
     }
