@@ -162,7 +162,7 @@
             { "nombre": "CATALIZADOR HS", "imagen": "tarros/AUXILIAR.webp", "pdf": "fichastecnicas/Auxiliares/FT CATALIZADOR HS.pdf" },
             { "nombre": "CATALIZADOR AUTOIMPRIMANTE", "imagen": "tarros/dil.webp", "pdf": "fichastecnicas/Auxiliares/FT CATALIZADOR AUTOIMPRIMANTE.pdf" },
             { "nombre": "CATALIZADOR PUR IND", "imagen": "tarros/AUXILIAR.webp", "pdf": "fichastecnicas/Auxiliares/" },
-            { "nombre": "ENDURECEDOR POLIURETANO", "imagen": "tarros/AUXILIAR.webp", "pdf": "fichastecnicas/Auxiliares/FT ENDURECEDOR POLIUERTANO.pdf" },
+            { "nombre": "ENDURECEDOR POLIURETANO", "imagen": "tarros/AUXILIAR.webp", "pdf": "fichastecnicas/Auxiliares/FT ENDURECEDOR POLIURETANO.pdf" },
             { "nombre": "MASILLA POLIESTER", "imagen": "tarros/masilla.png", "pdf": "fichastecnicas/Masillas/FT MASILLA.pdf" }
         ]
     }
