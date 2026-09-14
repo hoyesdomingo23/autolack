@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificado de Análisis | Autolack</title>
+    <link rel="icon" type="image/png" href="../imagenes/icono.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/coa-modal.css">
+    <style>
+        :root {
+            --ink: #1a1a1a;
+            --muted: #5a5a5a;
+            --line: #c8c8c8;
+            --brand: #0b3d91;
+            --ok: #1b7a3d;
+            --bad: #b42318;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            background: #e8e8e8;
+            font-family: Montserrat, "Segoe UI", Arial, sans-serif;
+            color: var(--ink);
+        }
+        .toolbar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 16px;
+            background: #1e1e1e;
+            color: #eee;
+        }
+        .toolbar p { margin: 0; font-size: 0.9rem; color: #bbb; max-width: 50%; }
+        .toolbar button, .toolbar a {
+            border: none;
+            border-radius: 6px;
+            padding: 9px 14px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 0.85rem;
+            color: #fff;
+            font-family: inherit;
+        }
+        .btn-print { background: #3b82f6; }
+        .btn-download { background: #16a34a; }
+        .btn-download:disabled { opacity: 0.65; cursor: wait; }
+        .btn-search { background: #003399; }
+        .btn-back { background: #444; }
+        .aviso {
+            width: min(816px, 96vw);
+            margin: 16px auto 0;
+            padding: 12px 14px;
+            border-radius: 8px;
+            background: #fff3cd;
+            color: #664d03;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .aviso.err { background: #fde8e8; color: #7f1d1d; }
+        .sheet {
+            width: min(816px, 96vw);
+            margin: 24px auto 40px;
+            background: #fff;
+            padding: 22px 28px 18px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        .coa-header {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 12px;
+            align-items: center;
+            border-bottom: 2px solid var(--brand);
+            padding-bottom: 10px;
+            margin-bottom: 12px;
+        }
+        .coa-logo {
+            width: 100px;
+            height: 70px;
+            object-fit: contain;
+            display: block;
+            flex-shrink: 0;
+            background: transparent;
+        }
+        .brand-name { font-size: 1.15rem; font-weight: 800; color: var(--brand); margin: 0; }
+        .brand-sub { margin: 2px 0 0; font-size: 0.72rem; color: var(--muted); line-height: 1.3; }
+        .doc-title-box { text-align: right; }
+        .doc-title { margin: 0; font-size: 0.92rem; font-weight: 800; text-transform: uppercase; color: var(--brand); }
+        .doc-no { margin: 4px 0 0; font-size: 0.78rem; color: var(--muted); }
+        .badge {
+            display: inline-block;
+            margin-top: 5px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.68rem;
+            font-weight: 800;
+            border: 1px solid #b7e0c5;
+            background: #e8f5ee;
+            color: var(--ok);
+        }
+        .meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px 20px;
+            margin-bottom: 12px;
+            font-size: 0.82rem;
+        }
+        .meta .lbl {
+            display: block;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--muted);
+            margin-bottom: 1px;
+        }
+        .meta .val { font-weight: 700; }
+        h3.section {
+            margin: 10px 0 6px;
+            font-size: 0.85rem;
+            color: var(--brand);
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 3px;
+        }
+        table.results { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+        table.results th, table.results td {
+            border: 1px solid var(--line);
+            padding: 5px 7px;
+            text-align: left;
+            vertical-align: top;
+        }
+        table.results th {
+            background: #f3f6fb;
+            color: var(--brand);
+            font-size: 0.68rem;
+            text-transform: uppercase;
+        }
+        table.results td.center { text-align: center; }
+        .ok { color: var(--ok); font-weight: 800; }
+        .bad { color: var(--bad); font-weight: 800; }
+        .obs {
+            margin-top: 10px;
+            padding: 7px 9px;
+            background: #fafafa;
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            font-size: 0.75rem;
+            line-height: 1.35;
+        }
+        .obs .obs-title {
+            display: block;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--muted);
+            margin-bottom: 3px;
+            font-weight: 700;
+        }
+        .firmas-una {
+            display: grid;
+            grid-template-columns: minmax(180px, 280px);
+            justify-content: center;
+            margin-top: 18px;
+        }
+        .firma-box {
+            text-align: center;
+            padding-top: 8px;
+            border-top: 1px solid var(--ink);
+            font-size: 0.78rem;
+        }
+        .firma-sello {
+            display: block;
+            width: 88px;
+            height: 62px;
+            object-fit: contain;
+            margin: 4px auto;
+            opacity: 0.92;
+        }
+        .firma-nombre { font-weight: 800; font-size: 0.85rem; margin: 0; }
+        .firma-iniciales { font-size: 0.7rem; color: var(--muted); margin: 1px 0 0; }
+        .firma-box .role { color: var(--muted); font-size: 0.68rem; margin-top: 4px; }
+        .footer {
+            margin-top: 14px;
+            padding-top: 7px;
+            border-top: 1px solid var(--line);
+            font-size: 0.65rem;
+            color: var(--muted);
+            line-height: 1.35;
+            text-align: center;
+        }
+        .sheet.pdf-compact {
+            width: 816px !important;
+            max-width: 816px !important;
+            margin: 0 !important;
+            box-shadow: none !important;
+            padding: 16px 22px 12px !important;
+        }
+        .sheet.pdf-compact .coa-logo { width: 86px; height: 60px; }
+        .sheet.pdf-compact .firma-sello { width: 82px; height: 58px; }
+        @page { size: letter; margin: 0.4in; }
+        @media print {
+            body { background: #fff; }
+            .toolbar, .aviso { display: none !important; }
+            .sheet {
+                width: 100% !important;
+                margin: 0 !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+            }
+        }
+        @media (max-width: 640px) {
+            .sheet { padding: 16px 14px; }
+            .coa-header, .meta { grid-template-columns: 1fr; }
+            .doc-title-box { text-align: left; }
+            .toolbar p { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="toolbar">
+        <p id="toolbar-msg">Consulta pública · Certificado de Análisis</p>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <button type="button" class="btn-search js-abrir-coa">Buscar otro lote</button>
+            <button type="button" class="btn-download" id="btn-download-coa">Descargar PDF</button>
+            <button type="button" class="btn-print" id="btn-print-coa">Imprimir</button>
+            <a class="btn-back" href="../index.html">← Inicio</a>
+        </div>
+    </div>
+    <div id="aviso" class="aviso"></div>
+
+    <article class="sheet" id="coa">
+        <header class="coa-header">
+            <img class="coa-logo" src="logo-autolack.png" alt="Autolack" width="100" height="70"
+                 onerror="this.onerror=null;this.src='../imagenes/logo-coa.png';">
+            <div>
+                <p class="brand-name">INDUSTRIAS AUTOLACK S.A.S.</p>
+                <p class="brand-sub">Expertos en pintura · Control de Calidad<br>Colombia</p>
+            </div>
+            <div class="doc-title-box">
+                <h1 class="doc-title">Certificado de Análisis</h1>
+                <p class="doc-no">N° <strong id="coa-numero">—</strong></p>
+                <span class="badge" id="coa-estado">—</span>
+            </div>
+        </header>
+
+        <div class="meta">
+            <div><span class="lbl">Producto</span><span class="val" id="coa-producto">—</span></div>
+            <div><span class="lbl">Código</span><span class="val" id="coa-codigo">—</span></div>
+            <div><span class="lbl">Número de lote</span><span class="val" id="coa-lote">—</span></div>
+            <div><span class="lbl">Fecha de producción</span><span class="val" id="coa-fecha">—</span></div>
+            <div><span class="lbl">Línea / Familia</span><span class="val" id="coa-familia">—</span></div>
+            <div><span class="lbl">Fecha de emisión</span><span class="val" id="coa-emision">—</span></div>
+            <div><span class="lbl">Analista</span><span class="val" id="coa-analista">—</span></div>
+        </div>
+
+        <h3 class="section">Resultados de control de calidad</h3>
+        <table class="results">
+            <thead>
+                <tr>
+                    <th>Parámetro</th>
+                    <th>Rango / Especificación</th>
+                    <th>Procedimiento</th>
+                    <th>Resultado</th>
+                    <th class="center">Evaluación</th>
+                </tr>
+            </thead>
+            <tbody id="coa-resultados">
+                <tr><td colspan="5" style="text-align:center;color:#888;">Cargando…</td></tr>
+            </tbody>
+        </table>
+
+        <div class="obs">
+            <span class="obs-title">Observaciones generales</span>
+            <span>El presente certificado declara que el lote analizado fue evaluado conforme a las especificaciones técnicas internas de Industrias Autolack S.A.S. para el producto indicado. Los resultados corresponden a las pruebas de control de calidad aplicadas a este lote. La evaluación “Igual al patrón” indica si la muestra es similar al patrón de referencia del producto.</span>
+        </div>
+        <div class="obs" id="coa-obs-lote-wrap" style="display:none;">
+            <span class="obs-title">Observaciones del lote</span>
+            <span id="coa-obs-lote"></span>
+        </div>
+
+        <div class="firmas-una">
+            <div class="firma-box">
+                <img class="firma-sello" src="logo-autolack.png" alt="Sello Autolack" width="88" height="62"
+                     onerror="this.onerror=null;this.src='../imagenes/logo-coa.png';">
+                <p class="firma-nombre" id="coa-firma-nombre">________________</p>
+                <p class="firma-iniciales" id="coa-firma-iniciales"></p>
+                <div class="role">Firma de revisión / Calidad</div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            Documento generado por el sistema Autolack · Control de Calidad PT.<br>
+            Este certificado aplica únicamente al lote indicado. Los rangos corresponden a la especificación técnica del producto.
+        </footer>
+    </article>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="../js/coa-modal.js" data-cert="index.html"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import {
+            getDatabase,
+            ref,
+            get,
+            query,
+            orderByChild,
+            equalTo,
+            limitToFirst
+        } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCDVJjcVQlQ9kwDZffDBTEKmp0Eh8yEDA8",
+            authDomain: "autolack-app.firebaseapp.com",
+            databaseURL: "https://autolack-app-default-rtdb.firebaseio.com/",
+            projectId: "autolack-app",
+            storageBucket: "autolack-app.firebasestorage.app"
+        };
+        const db = getDatabase(initializeApp(firebaseConfig));
+
+        const ANALISTAS = { MO: "Mateo Medina Osorio", JT: "John Toro" };
+        const params = new URLSearchParams(location.search);
+        /** Única clave de búsqueda pública: número de lote. */
+        const loteParam = (params.get("lote") || "").trim().toUpperCase().replace(/\s+/g, "");
+
+        function esc(s) {
+            return String(s ?? "")
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;");
+        }
+
+        function mostrarAviso(msg, err = false) {
+            const el = document.getElementById("aviso");
+            el.style.display = "block";
+            el.className = "aviso" + (err ? " err" : "");
+            el.textContent = msg;
+        }
+
+        function normalizarEstado(estado) {
+            const e = String(estado || "").toUpperCase().trim();
+            if (e === "AJUSTE") return "CONDICIONADO";
+            return e || "---";
+        }
+
+        /**
+         * Busca SOLO por lote:
+         * 1) coa_publico/{LOTE}
+         * 2) certificados_pt filtrado por lote (APROBADO)
+         */
+        async function buscarCertificadoPorLote(lote) {
+            const pub = await get(ref(db, `coa_publico/${lote}`));
+            if (pub.exists()) return pub.val();
+
+            try {
+                const q = query(
+                    ref(db, "certificados_pt"),
+                    orderByChild("lote"),
+                    equalTo(lote),
+                    limitToFirst(15)
+                );
+                const snap = await get(q);
+                if (!snap.exists()) return null;
+                let best = null;
+                snap.forEach((child) => {
+                    const d = child.val() || {};
+                    if (normalizarEstado(d.estado) !== "APROBADO") return;
+                    if (!best) best = d;
+                    else if (String(d.timestamp || "") > String(best.timestamp || "")) best = d;
+                });
+                if (!best) return null;
+
+                // Completar rangos/procedimientos si la config es legible
+                if (best.codigo && !best.campos) {
+                    try {
+                        const cfg = await get(ref(db, `config_calidad_pt/productos/${best.codigo}`));
+                        if (cfg.exists()) {
+                            const v = cfg.val() || {};
+                            best = {
+                                ...best,
+                                familia: best.familia || v.familia || "",
+                                campos: Array.isArray(v.campos) ? v.campos : []
+                            };
+                        }
+                    } catch (_) { /* sin acceso a config: CoA igual se muestra */ }
+                }
+                return best;
+            } catch (e) {
+                console.warn("Fallback certificados_pt por lote:", e);
+                return null;
+            }
+        }
+
+        function formatoFecha(v) {
+            if (!v) return "—";
+            if (/^\d{4}-\d{2}-\d{2}$/.test(v)) {
+                const [y, m, d] = v.split("-");
+                return `${d}/${m}/${y}`;
+            }
+            const d = new Date(v);
+            if (Number.isNaN(d.getTime())) return String(v);
+            return d.toLocaleDateString("es-CO");
+        }
+
+        function extraerNumero(texto) {
+            const m = String(texto || "").replace(",", ".").match(/-?\d+(\.\d+)?/);
+            return m ? parseFloat(m[0]) : NaN;
+        }
+
+        function evaluarCumple(rango, resultado) {
+            const r = String(rango || "").trim();
+            const n = extraerNumero(resultado);
+            if (!r || Number.isNaN(n)) return "—";
+            let m = r.match(/(-?\d+(?:[.,]\d+)?)\s*[-–—a]+\s*(-?\d+(?:[.,]\d+)?)/i);
+            if (m) {
+                const min = parseFloat(m[1].replace(",", "."));
+                const max = parseFloat(m[2].replace(",", "."));
+                return n >= min && n <= max ? "CUMPLE" : "NO CUMPLE";
+            }
+            m = r.match(/[≥>=]+\s*(-?\d+(?:[.,]\d+)?)/);
+            if (m) return n >= parseFloat(m[1].replace(",", ".")) ? "CUMPLE" : "NO CUMPLE";
+            m = r.match(/[≤<=]+\s*(-?\d+(?:[.,]\d+)?)/);
+            if (m) return n <= parseFloat(m[1].replace(",", ".")) ? "CUMPLE" : "NO CUMPLE";
+            return "—";
+        }
+
+        function resolverAnalista(firma) {
+            const raw = String(firma || "").trim().toUpperCase().replace(/\./g, "");
+            const nombre = ANALISTAS[raw] || "";
+            return {
+                iniciales: raw || "—",
+                nombre: nombre || (raw ? `Analista ${raw}` : "________________")
+            };
+        }
+
+        function nombreArchivoCoa(data) {
+            const limpio = (s, fallback) => String(s || fallback)
+                .trim()
+                .replace(/[\\/:*?"<>|]+/g, "")
+                .replace(/\s+/g, " ")
+                .trim();
+            const prod = limpio(data.nombre || data.codigo, "Producto");
+            const lote = limpio(data.lote, "SIN-LOTE").replace(/\s+/g, "");
+            return `${prod}-${lote}`;
+        }
+
+        function parseCampo(c) {
+            if (c && typeof c === "object") {
+                return {
+                    nombre: String(c.nombre || "").trim(),
+                    rango: String(c.rango || "").trim(),
+                    procedimiento: String(c.procedimiento || "").trim()
+                };
+            }
+            return { nombre: String(c || "").trim(), rango: "", procedimiento: "" };
+        }
+
+        function pintar(data) {
+            const lote = data.lote || loteParam;
+            const num = `COA-PT-${String(lote).replace(/\s+/g, "")}`;
+            document.getElementById("coa-numero").textContent = num;
+            document.getElementById("coa-estado").textContent = data.estado || "APROBADO";
+            document.getElementById("coa-producto").textContent = data.nombre || "—";
+            document.getElementById("coa-codigo").textContent = data.codigo || "—";
+            document.getElementById("coa-lote").textContent = lote || "—";
+            document.getElementById("coa-fecha").textContent = formatoFecha(data.fecha);
+            document.getElementById("coa-familia").textContent = data.familia || "—";
+            document.getElementById("coa-emision").textContent = formatoFecha(data.publicadoAt || data.timestamp || new Date().toISOString());
+
+            const analista = resolverAnalista(data.analista);
+            document.getElementById("coa-analista").textContent =
+                analista.nombre !== "________________" && !analista.nombre.startsWith("Analista ")
+                    ? `${analista.nombre} (${analista.iniciales})`
+                    : (data.analista || "—");
+            document.getElementById("coa-firma-nombre").textContent = analista.nombre;
+            document.getElementById("coa-firma-iniciales").textContent =
+                analista.iniciales !== "—" ? analista.iniciales : "";
+
+            const obs = String(data.observaciones || "").trim();
+            const wrap = document.getElementById("coa-obs-lote-wrap");
+            if (obs) {
+                wrap.style.display = "block";
+                document.getElementById("coa-obs-lote").textContent = obs;
+            }
+
+            const metaCampos = {};
+            (Array.isArray(data.campos) ? data.campos : []).forEach((c) => {
+                const p = parseCampo(c);
+                if (p.nombre) metaCampos[p.nombre.toUpperCase()] = p;
+            });
+
+            const resultados = data.resultados || {};
+            const keys = Object.keys(resultados);
+            const patron = String(data.patron || "N/A").toUpperCase();
+            let evalPatron = "—";
+            if (patron === "CUMPLE" || patron === "NO CUMPLE" || patron === "N/A") evalPatron = patron;
+            const clsPatron = evalPatron === "CUMPLE" ? "ok" : evalPatron === "NO CUMPLE" ? "bad" : "";
+
+            let filas = `<tr>
+                <td>¿IGUAL AL PATRÓN?</td>
+                <td>SIMILAR AL PATRÓN DE REFERENCIA</td>
+                <td>INSPECCIÓN VISUAL / COMPARACIÓN</td>
+                <td>${esc(patron)}</td>
+                <td class="center ${clsPatron}">${esc(evalPatron)}</td>
+            </tr>`;
+
+            if (!keys.length) {
+                filas += `<tr><td colspan="5" style="text-align:center;color:#888;">Sin parámetros adicionales.</td></tr>`;
+            } else {
+                filas += keys.map((param) => {
+                    const meta = metaCampos[String(param).toUpperCase()] || { rango: "—", procedimiento: "—" };
+                    const valor = resultados[param];
+                    let evalTxt = evaluarCumple(meta.rango === "—" ? "" : meta.rango, valor);
+                    if (evalTxt === "—") evalTxt = "CUMPLE";
+                    const cls = evalTxt === "CUMPLE" ? "ok" : evalTxt === "NO CUMPLE" ? "bad" : "";
+                    return `<tr>
+                        <td>${esc(param)}</td>
+                        <td>${esc(meta.rango || "—")}</td>
+                        <td>${esc(meta.procedimiento || "—")}</td>
+                        <td>${esc(valor)}</td>
+                        <td class="center ${cls}">${esc(evalTxt)}</td>
+                    </tr>`;
+                }).join("");
+            }
+            document.getElementById("coa-resultados").innerHTML = filas;
+            document.getElementById("toolbar-msg").textContent =
+                `Certificado · Lote ${lote} · ${data.nombre || data.codigo || ""}`;
+            window.__coaNombreArchivo = nombreArchivoCoa({ ...data, lote });
+            document.title = window.__coaNombreArchivo;
+        }
+
+        function recortarBlancosCanvas(source) {
+            const ctx = source.getContext("2d");
+            const { width, height } = source;
+            const data = ctx.getImageData(0, 0, width, height).data;
+            const isWhite = (i) => data[i] > 250 && data[i + 1] > 250 && data[i + 2] > 250;
+            let top = 0, bottom = height - 1, left = 0, right = width - 1;
+            scanTop: for (; top < height; top++) {
+                for (let x = 0; x < width; x++) if (!isWhite((top * width + x) * 4)) break scanTop;
+            }
+            scanBottom: for (; bottom >= top; bottom--) {
+                for (let x = 0; x < width; x++) if (!isWhite((bottom * width + x) * 4)) break scanBottom;
+            }
+            scanLeft: for (; left < width; left++) {
+                for (let y = top; y <= bottom; y++) if (!isWhite((y * width + left) * 4)) break scanLeft;
+            }
+            scanRight: for (; right >= left; right--) {
+                for (let y = top; y <= bottom; y++) if (!isWhite((y * width + right) * 4)) break scanRight;
+            }
+            const pad = 4;
+            left = Math.max(0, left - pad);
+            top = Math.max(0, top - pad);
+            right = Math.min(width - 1, right + pad);
+            bottom = Math.min(height - 1, bottom + pad);
+            const tw = right - left + 1;
+            const th = bottom - top + 1;
+            if (tw <= 0 || th <= 0 || (tw === width && th === height)) return source;
+            const out = document.createElement("canvas");
+            out.width = tw;
+            out.height = th;
+            out.getContext("2d").drawImage(source, left, top, tw, th, 0, 0, tw, th);
+            return out;
+        }
+
+        document.getElementById("btn-print-coa")?.addEventListener("click", () => window.print());
+
+        document.getElementById("btn-download-coa")?.addEventListener("click", async () => {
+            const btn = document.getElementById("btn-download-coa");
+            const el = document.getElementById("coa");
+            if (!el || typeof html2pdf !== "function" || !window.jspdf?.jsPDF) {
+                return mostrarAviso("No se pudo cargar el generador de PDF. Recarga la página.", true);
+            }
+            const filename = `${window.__coaNombreArchivo || "Certificado-Analisis"}.pdf`;
+            const prev = btn.textContent;
+            btn.disabled = true;
+            btn.textContent = "Generando…";
+
+            const host = document.createElement("div");
+            host.style.cssText = "position:fixed;left:0;top:0;width:816px;background:#fff;z-index:-1;opacity:0;pointer-events:none;";
+            const clone = el.cloneNode(true);
+            clone.id = "coa-pdf-clone";
+            clone.classList.add("pdf-compact");
+            clone.style.cssText = "width:816px;max-width:816px;margin:0;box-shadow:none;";
+            host.appendChild(clone);
+            document.body.appendChild(host);
+
+            try {
+                await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+                const canvas = await html2pdf()
+                    .set({
+                        html2canvas: {
+                            scale: 2,
+                            useCORS: true,
+                            backgroundColor: "#ffffff",
+                            logging: false,
+                            scrollX: 0,
+                            scrollY: 0,
+                            x: 0,
+                            y: 0,
+                            windowWidth: 816,
+                            width: 816
+                        }
+                    })
+                    .from(clone)
+                    .toCanvas()
+                    .get("canvas");
+
+                const trimmed = recortarBlancosCanvas(canvas);
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF({ unit: "mm", format: "letter", orientation: "portrait", compress: true });
+                const pageW = pdf.internal.pageSize.getWidth();
+                const pageH = pdf.internal.pageSize.getHeight();
+                const margin = 10;
+                const availW = pageW - margin * 2;
+                const availH = pageH - margin * 2;
+                let w = availW;
+                let h = (trimmed.height * w) / trimmed.width;
+                if (h > availH) {
+                    h = availH;
+                    w = (trimmed.width * h) / trimmed.height;
+                }
+                const x = margin + (availW - w) / 2;
+                pdf.addImage(trimmed.toDataURL("image/jpeg", 0.96), "JPEG", x, margin, w, h, undefined, "FAST");
+                pdf.save(filename);
+            } catch (e) {
+                console.error(e);
+                mostrarAviso("Error al descargar PDF: " + (e.message || e), true);
+            } finally {
+                host.remove();
+                btn.disabled = false;
+                btn.textContent = prev;
+            }
+        });
+
+        async function cargar() {
+            if (!loteParam) {
+                mostrarAviso("Debes indicar un número de lote. La consulta es solo por lote.", true);
+                document.getElementById("coa-resultados").innerHTML =
+                    `<tr><td colspan="5" style="text-align:center;">Sin lote. Usa “Buscar otro lote”.</td></tr>`;
+                return;
+            }
+            try {
+                const data = await buscarCertificadoPorLote(loteParam);
+                if (!data) {
+                    mostrarAviso(
+                        `No se encontró certificado APROBADO para el lote ${loteParam}. La búsqueda es solo por número de lote.`,
+                        true
+                    );
+                    document.getElementById("coa-resultados").innerHTML =
+                        `<tr><td colspan="5" style="text-align:center;">Lote no encontrado.</td></tr>`;
+                    return;
+                }
+                pintar(data);
+            } catch (e) {
+                console.error(e);
+                mostrarAviso("Error al consultar el lote: " + (e.message || e), true);
+                document.getElementById("coa-resultados").innerHTML =
+                    `<tr><td colspan="5" style="text-align:center;">Error de consulta.</td></tr>`;
+            }
+        }
+
+        cargar();
+    </script>
+</body>
+</html>
