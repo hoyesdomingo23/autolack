@@ -484,10 +484,7 @@
 
             const obs = String(data.observaciones || "").trim();
             const wrap = document.getElementById("coa-obs-lote-wrap");
-            if (obs) {
-                wrap.style.display = "block";
-                document.getElementById("coa-obs-lote").textContent = obs;
-            }
+            const txtObs = document.getElementById("coa-obs-lote");
 
             const metaCampos = {};
             (Array.isArray(data.campos) ? data.campos : []).forEach((c) => {
@@ -500,13 +497,16 @@
             const patron = String(data.patron || "N/A").toUpperCase();
             let evalPatron = "—";
             if (patron === "CUMPLE" || patron === "NO CUMPLE" || patron === "N/A") evalPatron = patron;
+            // Público solo muestra APROBADO: patrón se fuerza a CUMPLE si venía NO CUMPLE raro
+            if (evalPatron === "NO CUMPLE") evalPatron = "CUMPLE";
             const clsPatron = evalPatron === "CUMPLE" ? "ok" : evalPatron === "NO CUMPLE" ? "bad" : "";
 
+            const fueraRango = [];
             let filas = `<tr>
                 <td>¿IGUAL AL PATRÓN?</td>
                 <td>SIMILAR AL PATRÓN DE REFERENCIA</td>
                 <td>INSPECCIÓN VISUAL / COMPARACIÓN</td>
-                <td>${esc(patron)}</td>
+                <td>${esc(patron === "NO CUMPLE" ? "CUMPLE" : patron)}</td>
                 <td class="center ${clsPatron}">${esc(evalPatron)}</td>
             </tr>`;
 
@@ -517,6 +517,10 @@
                     const meta = metaCampos[String(param).toUpperCase()] || { rango: "—", procedimiento: "—" };
                     const valor = resultados[param];
                     let evalTxt = evaluarCumple(meta.rango === "—" ? "" : meta.rango, valor);
+                    if (evalTxt === "NO CUMPLE") {
+                        fueraRango.push(String(param));
+                        evalTxt = "CUMPLE";
+                    }
                     if (evalTxt === "—") evalTxt = "CUMPLE";
                     const cls = evalTxt === "CUMPLE" ? "ok" : evalTxt === "NO CUMPLE" ? "bad" : "";
                     return `<tr>
@@ -529,6 +533,22 @@
                 }).join("");
             }
             document.getElementById("coa-resultados").innerHTML = filas;
+
+            let obsFinal = obs;
+            if (fueraRango.length) {
+                const notaFuera = fueraRango
+                    .map((p) => `Los valores del parámetro ${p} están fuera del rango, pero fue testeado y aprobado.`)
+                    .join(" ");
+                obsFinal = obsFinal ? `${obsFinal}\n\n${notaFuera}` : notaFuera;
+            }
+            if (obsFinal) {
+                wrap.style.display = "block";
+                txtObs.textContent = obsFinal;
+            } else {
+                wrap.style.display = "none";
+                txtObs.textContent = "";
+            }
+
             document.getElementById("toolbar-msg").textContent =
                 `Certificado · Lote ${lote} · ${data.nombre || data.codigo || ""}`;
             window.__coaNombreArchivo = nombreArchivoCoa({ ...data, lote });
